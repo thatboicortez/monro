@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Записатися | Monro Віссенкерке</title>
+  <meta name="description" content="Запис до Monro у Віссенкерке через форму, WhatsApp або телефоном. Julianastraat 28, Віссенкерке.">
+  <meta name="theme-color" content="#F4F0EA">
+  <meta property="og:title" content="Записатися | Monro Віссенкерке">
+  <meta property="og:description" content="Запис до Monro у Віссенкерке через форму, WhatsApp або телефоном. Julianastraat 28, Віссенкерке.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/hero.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/prata-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body data-page="contact">
+  <a class="skip" href="#main">До змісту</a>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <nav class="header__nav" aria-label="Menu">
+        <a href="/uk/behandelingen/">Процедури</a>
+        <a href="/uk/over/">Про мене</a>
+        <a href="/uk/werkwijze/">Як я працюю</a>
+      </nav>
+      <a class="brand" href="/uk/" aria-label="Monro, Головна">
+        <span class="brand__name">Monro</span>
+        <span class="brand__sub">косметологія</span>
+      </a>
+      <div class="header__actions">
+        <div class="lang"><a class="lang__link" href="/contact/" hreflang="nl" lang="nl">NL</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__link" href="/uk/contact/" hreflang="uk" lang="uk" aria-current="true">UA</a></div>
+        <a class="btn btn--dark btn--sm header__cta" href="/uk/contact/" aria-current="page">Записатися</a>
+        <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="burger__lines" aria-hidden="true"></span>
+          <span class="sr">Меню</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="header-sentinel" aria-hidden="true"></div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Меню">
+      <a href="/uk/">Головна</a>
+      <a href="/uk/behandelingen/">Процедури</a>
+        <a href="/uk/over/">Про мене</a>
+        <a href="/uk/werkwijze/">Як я працюю</a>
+    </nav>
+    <a class="btn btn--dark btn--block" href="/uk/contact/">Записатися</a>
+  </div>
+
+  <main id="main">
+    <section class="contact">
+      <div class="contact__info">
+        <h1 class="page-head__title reveal">Записатися</h1>
+        <p class="page-head__lead reveal">Оберіть процедуру й залиште свої дані. Хочете напряму? Зателефонуйте або напишіть у WhatsApp.</p>
+        <dl class="contact__list reveal">
+          <div><dt>Телефон</dt><dd><a href="tel:+31621931150">+31 (0)6 21 93 11 50</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/31621931150" target="_blank" rel="noopener">Написати</a></dd></div>
+          <div><dt>Адреса</dt><dd>Julianastraat 28, Wissenkerke<br><a class="small-link" href="https://www.google.com/maps/search/?api=1&amp;query=Julianastraat+28+Wissenkerke" target="_blank" rel="noopener">Прокласти маршрут</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/babichenko_tetiana/" target="_blank" rel="noopener">@babichenko_tetiana</a></dd></div>
+          <div><dt>Графік роботи</dt><dd>За попереднім записом</dd></div>
+        </dl>
+      </div>
+
+      <form class="form reveal" id="booking-form" novalidate
+            data-whatsapp="31621931150" data-email=""
+            data-subject="Заявка на запис із сайту">
+        <div class="form__row">
+          <div class="field">
+            <label class="field__label" for="f-name">Ім&#x27;я</label>
+            <input id="f-name" type="text" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-phone">Номер телефону</label>
+            <input id="f-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel">
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label class="field__label" for="f-email">E-mail</label>
+            <input id="f-email" type="email" name="email" autocomplete="email">
+          </div>
+          <div class="field field--select">
+            <label class="field__label" for="f-service">Процедура</label>
+            <select id="f-service" name="service"><option value="consult">Діагностика / консультація</option><option value="reiniging">Чистка та детокс шкіри</option><option value="contour">Контурна пластика</option><option value="laser">Лазерне омолодження</option><option value="unsure">Ще не знаю</option></select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-message">Питання чи коментар (необов&#x27;язково)</label>
+          <textarea id="f-message" name="message" rows="4"></textarea>
+        </div>
+        <label class="check">
+          <input type="checkbox" name="consent" required>
+          <span>Я погоджуюся, що мої дані будуть використані для зв&#x27;язку зі мною.</span>
+        </label>
+        <p class="form__error" id="form-error" role="alert" hidden>Вкажіть ім&#x27;я, телефон або e-mail і позначте згоду.</p>
+        <button type="submit" class="btn btn--dark btn--block">Надіслати у WhatsApp</button>
+        <p class="form__note">Повідомлення відкриється у WhatsApp. Ви надішлете його самі.</p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a class="brand__name brand__name--lg" href="/uk/">Monro</a>
+        <p>Індивідуальна косметологія у Віссенкерке, Зеландія.</p>
+      </div>
+      <nav class="footer__col" aria-label="Навігація">
+        <p class="footer__label">Навігація</p>
+        <a href="/uk/behandelingen/">Процедури</a>
+        <a href="/uk/over/">Про мене</a>
+        <a href="/uk/werkwijze/">Як я працюю</a>
+        <a href="/uk/contact/">Записатися</a>
+      </nav>
+      <div class="footer__col">
+        <p class="footer__label">Контакти</p>
+        <a href="tel:+31621931150">+31 (0)6 21 93 11 50</a>
+        <a href="https://wa.me/31621931150" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/babichenko_tetiana/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Julianastraat+28+Wissenkerke" target="_blank" rel="noopener">Julianastraat 28, Wissenkerke</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Monro. Усі права захищено.</span>
+      
+    </div>
+  </footer>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

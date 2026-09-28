@@ -1,0 +1,20 @@
+{
+  "_uitleg": "Alle bedrijfsgegevens. Laat een veld leeg (\"\") om het te verbergen. Na wijzigen: python build.py",
+  "name": "Monro",
+  "siteUrl": "",
+  "owner": { "nl": "Tetiana Babichenko", "uk": "Тетяна Бабіченко" },
+  "city": { "nl": "Wissenkerke", "uk": "Віссенкерке" },
+  "address": "Julianastraat 28, Wissenkerke",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Julianastraat+28+Wissenkerke",
+  "phone": "+31 (0)6 21 93 11 50",
+  "whatsapp": "31621931150",
+  "email": "",
+  "instagram": "https://www.instagram.com/babichenko_tetiana/",
+  "instagramHandle": "@babichenko_tetiana",
+  "kvk": "",
+  "treatments": [
+    { "id": "reiniging", "image": "reiniging.jpg", "price": 60, "duration": "45-60" },
+    { "id": "contour", "image": "contour.jpg", "price": 200, "duration": "30-45" },
+    { "id": "laser", "image": "laser.jpg", "price": 120, "duration": "30-60" }
+  ]
+}

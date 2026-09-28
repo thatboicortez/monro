@@ -1,0 +1,153 @@
+{
+  "langName": "Nederlands",
+  "brandSub": "cosmetologie",
+  "skip": "Naar de inhoud",
+
+  "nav": {
+    "treatments": "Behandelingen",
+    "about": "Over mij",
+    "process": "Werkwijze",
+    "book": "Afspraak maken",
+    "menu": "Menu",
+    "home": "Home"
+  },
+
+  "common": {
+    "min": "min",
+    "from": "vanaf",
+    "duration": "Duur",
+    "price": "Prijs",
+    "allTreatments": "Alle behandelingen",
+    "ctaTitle": "Begin met een huidanalyse.",
+    "ctaText": "Laat je gegevens achter of stuur een WhatsApp-bericht. Je krijgt zo snel mogelijk een voorstel voor een datum en tijd.",
+    "cosmetologist": "cosmetoloog"
+  },
+
+  "home": {
+    "title": "Monro | Cosmetologie in Wissenkerke",
+    "desc": "Persoonlijke huidbehandelingen in Wissenkerke, Zeeland. Huidreiniging, contourcorrectie en laserverjonging, van huidanalyse tot nazorg.",
+    "eyebrow": "Cosmetologie in Wissenkerke",
+    "heroTitle": "Zorg voor je huid,",
+    "heroAccent": "met aandacht.",
+    "heroLead": "Persoonlijke huidbehandelingen, van huidanalyse tot nazorg. Rustig, eerlijk en afgestemd op jouw huid.",
+    "manifesto": "Mooie huid is geen toeval. Het is aandacht, kennis en tijd, en een plan dat bij jou past.",
+    "treatmentsTitle": "Behandelingen",
+    "aboutTitle": "Een studio waar je huid centraal staat.",
+    "aboutText": "Bij Monro werk je met één cosmetoloog, van het eerste gesprek tot de laatste nazorgtip. Geen haast, wel de tijd om je huid echt te begrijpen.",
+    "aboutLink": "Maak kennis"
+  },
+
+  "treatmentsPage": {
+    "title": "Behandelingen | Monro Wissenkerke",
+    "desc": "Huidreiniging en detox, contourcorrectie met fillers en laserverjonging in Wissenkerke. Bekijk duur en prijzen.",
+    "h1": "Behandelingen",
+    "lead": "Elke behandeling begint met een gesprek en een blik op je huid. Daarna kiezen we samen wat werkt.",
+    "includes": "Wat het inhoudt",
+    "note": "Genoemde prijzen zijn vanafprijzen. Na de huidanalyse weet je precies waar je aan toe bent."
+  },
+
+  "treatments": {
+    "reiniging": {
+      "name": "Huidreiniging & detox",
+      "short": "Dieptereiniging, peelings en maskers voor een frisse, stralende huid.",
+      "desc": "Een grondige behandeling die de huid reinigt, vernieuwt en weer laat stralen. Geschikt als start van je huidtraject of als vast onderhoud.",
+      "includes": ["Dieptereiniging", "Peelings", "Maskers", "Verzorgende behandelingen"]
+    },
+    "contour": {
+      "name": "Contourcorrectie",
+      "short": "Subtiele correctie van lippen, jukbeenderen en kin met gecertificeerde fillers.",
+      "desc": "Voor meer volume of een mooiere lijn, met een natuurlijk resultaat als uitgangspunt. We bespreken vooraf samen wat bij jouw gezicht past.",
+      "includes": ["Lippen", "Jukbeenderen", "Kin", "Gecertificeerde fillers"]
+    },
+    "laser": {
+      "name": "Laserverjonging",
+      "short": "Minder pigmentatie, een gladdere huidstructuur en meer collageen.",
+      "desc": "Behandelingen die de huid van binnenuit vernieuwen. Het aantal sessies hangt af van je huid en je wensen.",
+      "includes": ["Pigmentatie verminderen", "Huidstructuur verfijnen", "Collageen stimuleren"]
+    }
+  },
+
+  "aboutPage": {
+    "title": "Over mij | Monro Wissenkerke",
+    "desc": "Maak kennis met Tetiana Babichenko, cosmetoloog in Wissenkerke. Persoonlijke aandacht, eerlijk advies, in het Nederlands en Oekraïens.",
+    "h1": "Over mij",
+    "intro": "Ik ben Tetiana, cosmetoloog en oprichter van Monro in Wissenkerke.",
+    "p1": "Bij Monro werk je met één cosmetoloog, van het eerste gesprek tot de laatste nazorgtip. Geen lopende band en geen haast, maar de tijd om je huid echt te begrijpen.",
+    "p2": "Ik combineer bewezen technieken met eerlijk advies. Soms betekent dat een intensieve behandeling, soms juist minder doen. Het doel is altijd hetzelfde: een gezonde huid waar je je goed bij voelt.",
+    "valuesTitle": "Waar ik voor sta",
+    "values": [
+      { "title": "Eerst luisteren", "text": "Je wensen en je huid bepalen het plan, niet een standaardpakket." },
+      { "title": "Eerlijk advies", "text": "Je hoort wat werkt, wat het kost en wanneer iets niet nodig is." },
+      { "title": "Rust en aandacht", "text": "Eén cliënt tegelijk, in een rustige studio, zonder haast." }
+    ],
+    "langTitle": "Nederlands of Oekraïens",
+    "langText": "Je kunt bij mij terecht in het Nederlands en in het Oekraïens. Zo begrijp je precies wat er met je huid gebeurt."
+  },
+
+  "processPage": {
+    "title": "Werkwijze | Monro Wissenkerke",
+    "desc": "Van huidanalyse tot nazorg: zo verloopt een behandeling bij Monro in Wissenkerke. Met antwoorden op veelgestelde vragen.",
+    "h1": "Werkwijze",
+    "lead": "Vier stappen, één plan. Zo weet je vooraf wat je kunt verwachten.",
+    "steps": [
+      { "title": "Huidanalyse", "text": "We bespreken je wensen en bekijken je huid: type, conditie en wat haar uit balans brengt." },
+      { "title": "Persoonlijk plan", "text": "Je krijgt een helder advies: welke behandelingen, in welke volgorde en wat het kost." },
+      { "title": "Behandeling", "text": "In een rustige studio, met professionele producten en alle aandacht voor comfort." },
+      { "title": "Nazorg", "text": "Advies voor thuis en een onderhoudsschema, zodat het resultaat blijft." }
+    ],
+    "faqTitle": "Veelgestelde vragen",
+    "faq": [
+      { "q": "Moet ik eerst een huidanalyse laten doen?", "a": "Ja. Elke behandeling begint met een korte huidanalyse, zodat we zeker weten dat de behandeling bij je huid past." },
+      { "q": "In welke taal kan ik terecht?", "a": "In het Nederlands en in het Oekraïens." },
+      { "q": "Hoe maak ik een afspraak?", "a": "Via het formulier op de contactpagina, via WhatsApp of telefonisch. Je krijgt zo snel mogelijk een voorstel voor een datum en tijd." },
+      { "q": "Waar is de studio?", "a": "Aan de Julianastraat 28 in Wissenkerke." }
+    ]
+  },
+
+  "contactPage": {
+    "title": "Afspraak maken | Monro Wissenkerke",
+    "desc": "Maak een afspraak bij Monro in Wissenkerke via het formulier, WhatsApp of telefoon. Julianastraat 28, Wissenkerke.",
+    "h1": "Afspraak maken",
+    "lead": "Kies een behandeling en laat je gegevens achter. Liever direct contact? Bel of stuur een WhatsApp-bericht.",
+    "phone": "Telefoon",
+    "whatsapp": "WhatsApp",
+    "whatsappCta": "Stuur een bericht",
+    "address": "Adres",
+    "route": "Route plannen",
+    "hours": "Openingstijden",
+    "hoursValue": "Op afspraak",
+    "email": "E-mail"
+  },
+
+  "form": {
+    "name": "Naam",
+    "phone": "Telefoonnummer",
+    "email": "E-mail",
+    "service": "Behandeling",
+    "consult": "Huidanalyse / advies",
+    "unsure": "Weet ik nog niet",
+    "message": "Vraag of opmerking (optioneel)",
+    "consent": "Ik ga akkoord dat mijn gegevens worden gebruikt om contact met mij op te nemen.",
+    "submit": "Verstuur via WhatsApp",
+    "submitEmail": "Verstuur via e-mail",
+    "note": "Je bericht wordt geopend in WhatsApp. Je verstuurt het zelf.",
+    "noteEmail": "Je bericht wordt geopend in je e-mailprogramma. Je verstuurt het zelf.",
+    "error": "Vul je naam in, een telefoonnummer of e-mail, en vink de toestemming aan.",
+    "subject": "Afspraakaanvraag via website"
+  },
+
+  "footer": {
+    "tag": "Persoonlijke cosmetologie in Wissenkerke, Zeeland.",
+    "nav": "Navigatie",
+    "contact": "Contact",
+    "rights": "Alle rechten voorbehouden.",
+    "kvk": "KvK"
+  },
+
+  "notFound": {
+    "title": "Pagina niet gevonden | Monro",
+    "h1": "Deze pagina bestaat niet.",
+    "text": "Misschien is de link verouderd. Ga terug naar de homepage of bekijk de behandelingen.",
+    "home": "Naar de homepage"
+  }
+}

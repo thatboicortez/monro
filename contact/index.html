@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Afspraak maken | Monro Wissenkerke</title>
+  <meta name="description" content="Maak een afspraak bij Monro in Wissenkerke via het formulier, WhatsApp of telefoon. Julianastraat 28, Wissenkerke.">
+  <meta name="theme-color" content="#F4F0EA">
+  <meta property="og:title" content="Afspraak maken | Monro Wissenkerke">
+  <meta property="og:description" content="Maak een afspraak bij Monro in Wissenkerke via het formulier, WhatsApp of telefoon. Julianastraat 28, Wissenkerke.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/hero.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/prata-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body data-page="contact">
+  <a class="skip" href="#main">Naar de inhoud</a>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <nav class="header__nav" aria-label="Menu">
+        <a href="/behandelingen/">Behandelingen</a>
+        <a href="/over/">Over mij</a>
+        <a href="/werkwijze/">Werkwijze</a>
+      </nav>
+      <a class="brand" href="/" aria-label="Monro, Home">
+        <span class="brand__name">Monro</span>
+        <span class="brand__sub">cosmetologie</span>
+      </a>
+      <div class="header__actions">
+        <div class="lang"><a class="lang__link" href="/contact/" hreflang="nl" lang="nl" aria-current="true">NL</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__link" href="/uk/contact/" hreflang="uk" lang="uk">UA</a></div>
+        <a class="btn btn--dark btn--sm header__cta" href="/contact/" aria-current="page">Afspraak maken</a>
+        <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="burger__lines" aria-hidden="true"></span>
+          <span class="sr">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="header-sentinel" aria-hidden="true"></div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Menu">
+      <a href="/">Home</a>
+      <a href="/behandelingen/">Behandelingen</a>
+        <a href="/over/">Over mij</a>
+        <a href="/werkwijze/">Werkwijze</a>
+    </nav>
+    <a class="btn btn--dark btn--block" href="/contact/">Afspraak maken</a>
+  </div>
+
+  <main id="main">
+    <section class="contact">
+      <div class="contact__info">
+        <h1 class="page-head__title reveal">Afspraak maken</h1>
+        <p class="page-head__lead reveal">Kies een behandeling en laat je gegevens achter. Liever direct contact? Bel of stuur een WhatsApp-bericht.</p>
+        <dl class="contact__list reveal">
+          <div><dt>Telefoon</dt><dd><a href="tel:+31621931150">+31 (0)6 21 93 11 50</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/31621931150" target="_blank" rel="noopener">Stuur een bericht</a></dd></div>
+          <div><dt>Adres</dt><dd>Julianastraat 28, Wissenkerke<br><a class="small-link" href="https://www.google.com/maps/search/?api=1&amp;query=Julianastraat+28+Wissenkerke" target="_blank" rel="noopener">Route plannen</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/babichenko_tetiana/" target="_blank" rel="noopener">@babichenko_tetiana</a></dd></div>
+          <div><dt>Openingstijden</dt><dd>Op afspraak</dd></div>
+        </dl>
+      </div>
+
+      <form class="form reveal" id="booking-form" novalidate
+            data-whatsapp="31621931150" data-email=""
+            data-subject="Afspraakaanvraag via website">
+        <div class="form__row">
+          <div class="field">
+            <label class="field__label" for="f-name">Naam</label>
+            <input id="f-name" type="text" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-phone">Telefoonnummer</label>
+            <input id="f-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel">
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label class="field__label" for="f-email">E-mail</label>
+            <input id="f-email" type="email" name="email" autocomplete="email">
+          </div>
+          <div class="field field--select">
+            <label class="field__label" for="f-service">Behandeling</label>
+            <select id="f-service" name="service"><option value="consult">Huidanalyse / advies</option><option value="reiniging">Huidreiniging &amp; detox</option><option value="contour">Contourcorrectie</option><option value="laser">Laserverjonging</option><option value="unsure">Weet ik nog niet</option></select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-message">Vraag of opmerking (optioneel)</label>
+          <textarea id="f-message" name="message" rows="4"></textarea>
+        </div>
+        <label class="check">
+          <input type="checkbox" name="consent" required>
+          <span>Ik ga akkoord dat mijn gegevens worden gebruikt om contact met mij op te nemen.</span>
+        </label>
+        <p class="form__error" id="form-error" role="alert" hidden>Vul je naam in, een telefoonnummer of e-mail, en vink de toestemming aan.</p>
+        <button type="submit" class="btn btn--dark btn--block">Verstuur via WhatsApp</button>
+        <p class="form__note">Je bericht wordt geopend in WhatsApp. Je verstuurt het zelf.</p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a class="brand__name brand__name--lg" href="/">Monro</a>
+        <p>Persoonlijke cosmetologie in Wissenkerke, Zeeland.</p>
+      </div>
+      <nav class="footer__col" aria-label="Navigatie">
+        <p class="footer__label">Navigatie</p>
+        <a href="/behandelingen/">Behandelingen</a>
+        <a href="/over/">Over mij</a>
+        <a href="/werkwijze/">Werkwijze</a>
+        <a href="/contact/">Afspraak maken</a>
+      </nav>
+      <div class="footer__col">
+        <p class="footer__label">Contact</p>
+        <a href="tel:+31621931150">+31 (0)6 21 93 11 50</a>
+        <a href="https://wa.me/31621931150" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/babichenko_tetiana/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Julianastraat+28+Wissenkerke" target="_blank" rel="noopener">Julianastraat 28, Wissenkerke</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Monro. Alle rechten voorbehouden.</span>
+      
+    </div>
+  </footer>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

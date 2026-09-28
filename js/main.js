@@ -1,0 +1,108 @@
+(function () {
+  "use strict";
+
+  /* ---------- Header: rand zodra de pagina gescrold is ---------- */
+  var header = document.getElementById("header");
+  var sentinel = document.querySelector(".header-sentinel");
+  if (header && sentinel && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      header.classList.toggle("is-scrolled", !entries[0].isIntersecting);
+    }).observe(sentinel);
+  }
+
+  /* ---------- Mobiel menu ---------- */
+  var burger = document.getElementById("burger");
+  var menu = document.getElementById("mobile-menu");
+  function setMenu(open) {
+    if (!burger || !menu) return;
+    burger.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open ? "hidden" : "";
+    if (open) {
+      menu.hidden = false;
+      requestAnimationFrame(function () { menu.classList.add("is-open"); });
+    } else {
+      menu.classList.remove("is-open");
+      setTimeout(function () { if (!menu.classList.contains("is-open")) menu.hidden = true; }, 350);
+    }
+  }
+  if (burger) {
+    burger.addEventListener("click", function () { setMenu(burger.getAttribute("aria-expanded") !== "true"); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+    window.matchMedia("(min-width: 1081px)").addEventListener("change", function (m) { if (m.matches) setMenu(false); });
+  }
+
+  /* ---------- Reveal bij scrollen ---------- */
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target;
+        var siblings = Array.prototype.filter.call(el.parentNode.children, function (c) { return c.classList.contains("reveal"); });
+        el.style.transitionDelay = Math.min(siblings.indexOf(el), 4) * 70 + "ms";
+        el.classList.add("is-in");
+        io.unobserve(el);
+      });
+    }, { rootMargin: "0px 0px -40px 0px", threshold: 0.01 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-in"); });
+  }
+
+  /* ---------- Afspraakformulier ----------
+   * Geen backend: de aanvraag opent als kant-en-klaar bericht in WhatsApp
+   * (of, zonder WhatsApp-nummer, in het e-mailprogramma). De klant verstuurt zelf.
+   */
+  var form = document.getElementById("booking-form");
+  if (!form) return;
+
+  var select = form.elements.service;
+  var pre = new URLSearchParams(location.search).get("behandeling");
+  if (pre && select.querySelector('option[value="' + pre + '"]')) select.value = pre;
+
+  var errorEl = document.getElementById("form-error");
+
+  function label(name) {
+    var el = form.querySelector('label[for="f-' + name + '"]');
+    return el ? el.textContent : name;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = form.elements;
+    var name = f.name.value.trim();
+    var phone = f.phone.value.trim();
+    var email = f.email.value.trim();
+
+    form.querySelectorAll(".is-invalid").forEach(function (el) { el.classList.remove("is-invalid"); });
+    var ok = true;
+    if (!name) { f.name.closest(".field").classList.add("is-invalid"); ok = false; }
+    if (!phone && !email) {
+      f.phone.closest(".field").classList.add("is-invalid");
+      f.email.closest(".field").classList.add("is-invalid");
+      ok = false;
+    }
+    if (!f.consent.checked) { f.consent.closest(".check").classList.add("is-invalid"); ok = false; }
+    errorEl.hidden = ok;
+    if (!ok) return;
+
+    var subject = form.getAttribute("data-subject");
+    var lines = [
+      subject,
+      "",
+      label("name") + ": " + name,
+      phone ? label("phone") + ": " + phone : null,
+      email ? label("email") + ": " + email : null,
+      label("service") + ": " + select.options[select.selectedIndex].text,
+      f.message.value.trim() ? "\n" + f.message.value.trim() : null
+    ].filter(function (l) { return l !== null; });
+    var body = lines.join("\n");
+
+    var wa = form.getAttribute("data-whatsapp");
+    if (wa) {
+      window.open("https://wa.me/" + wa + "?text=" + encodeURIComponent(body), "_blank", "noopener");
+    } else {
+      location.href = "mailto:" + form.getAttribute("data-email") + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    }
+  });
+})();
