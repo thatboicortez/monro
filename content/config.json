@@ -1,7 +1,7 @@
 {
   "_uitleg": "Alle bedrijfsgegevens. Laat een veld leeg (\"\") om het te verbergen. Na wijzigen: python build.py",
   "name": "Monro",
-  "siteUrl": "",
+  "siteUrl": "https://monro-shop.store",
   "owner": { "nl": "Tetiana Babichenko", "uk": "Тетяна Бабіченко" },
   "city": { "nl": "Wissenkerke", "uk": "Віссенкерке" },
   "address": "Julianastraat 28, Wissenkerke",

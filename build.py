@@ -85,7 +85,7 @@ def head(lang, page, title, desc):
   <meta property="og:title" content="{e(title)}">
   <meta property="og:description" content="{e(desc)}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/images/hero.jpg">{alternates}
+  <meta property="og:image" content="{CFG.get('siteUrl', '').rstrip('/')}/images/hero.jpg">{alternates}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/fonts/prata-{'latin' if lang == 'nl' else 'cyrillic'}-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
