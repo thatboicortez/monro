@@ -36,6 +36,8 @@
 html {
   background: var(--dark);
   overscroll-behavior-y: none;
+  /* Geen zoom bij dubbeltikken (bv. op de header); knijpzoom blijft werken. */
+  touch-action: manipulation;
   scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); -webkit-text-size-adjust: 100%;
 }
 /* Footer altijd onderaan, ook op korte pagina's */
