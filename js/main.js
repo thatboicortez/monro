@@ -94,7 +94,8 @@
 
     var wa = form.getAttribute("data-whatsapp");
     if (wa) {
-      window.open("https://wa.me/" + wa + "?text=" + encodeURIComponent(body), "_blank", "noopener");
+      // Gewone navigatie i.p.v. window.open: popupblokkers en in-app browsers (Instagram) laten dit altijd toe.
+      location.href = "https://wa.me/" + wa + "?text=" + encodeURIComponent(body);
     } else {
       location.href = "mailto:" + form.getAttribute("data-email") + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     }

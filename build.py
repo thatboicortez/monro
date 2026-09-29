@@ -12,6 +12,7 @@ Resultaat: kant-en-klare HTML-pagina's in de projectmap:
   /  /behandelingen/  /over/  /werkwijze/  /contact/   (Nederlands)
   /uk/  /uk/behandelingen/  ...                        (Oekraïens)
 """
+import hashlib
 import html
 import json
 import os
@@ -36,6 +37,12 @@ def load(name):
 
 CFG = load("config.json")
 T = {lang: load(lang + ".json") for lang in LANGS}
+
+
+def asset(path):
+    """Voegt ?v=<hash> toe, zodat browsers na een update meteen het nieuwe bestand laden."""
+    with open(os.path.join(ROOT, path.lstrip("/")), "rb") as f:
+        return f"{path}?v={hashlib.md5(f.read()).hexdigest()[:8]}"
 
 
 def e(s):
@@ -88,8 +95,8 @@ def head(lang, page, title, desc):
   <meta property="og:image" content="{CFG.get('siteUrl', '').rstrip('/')}/images/hero.jpg">{alternates}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/fonts/prata-{'latin' if lang == 'nl' else 'cyrillic'}-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{asset('/css/fonts.css')}">
+  <link rel="stylesheet" href="{asset('/css/style.css')}">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body data-page="{page}">
@@ -186,7 +193,7 @@ def footer(lang):
       {kvk}
     </div>
   </footer>
-  <script src="/js/main.js" defer></script>
+  <script src="{asset('/js/main.js')}" defer></script>
 </body>
 </html>
 """
