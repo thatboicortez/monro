@@ -79,19 +79,13 @@
             <input id="f-name" type="text" name="name" autocomplete="name" required>
           </div>
           <div class="field">
-            <label class="field__label" for="f-phone">Telefoonnummer</label>
+            <label class="field__label" for="f-phone">Telefoonnummer (optioneel)</label>
             <input id="f-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel">
           </div>
         </div>
-        <div class="form__row">
-          <div class="field">
-            <label class="field__label" for="f-email">E-mail</label>
-            <input id="f-email" type="email" name="email" autocomplete="email">
-          </div>
-          <div class="field field--select">
-            <label class="field__label" for="f-service">Behandeling</label>
-            <select id="f-service" name="service"><option value="consult">Huidanalyse / advies</option><option value="reiniging">Huidreiniging &amp; detox</option><option value="contour">Contourcorrectie</option><option value="laser">Laserverjonging</option><option value="unsure">Weet ik nog niet</option></select>
-          </div>
+        <div class="field field--select">
+          <label class="field__label" for="f-service">Behandeling</label>
+          <select id="f-service" name="service"><option value="consult">Huidanalyse / advies</option><option value="reiniging">Huidreiniging &amp; detox</option><option value="contour">Contourcorrectie</option><option value="laser">Laserverjonging</option><option value="unsure">Weet ik nog niet</option></select>
         </div>
         <div class="field">
           <label class="field__label" for="f-message">Vraag of opmerking (optioneel)</label>
@@ -101,7 +95,7 @@
           <input type="checkbox" name="consent" required>
           <span>Ik ga akkoord dat mijn gegevens worden gebruikt om contact met mij op te nemen.</span>
         </label>
-        <p class="form__error" id="form-error" role="alert" hidden>Vul je naam in, een telefoonnummer of e-mail, en vink de toestemming aan.</p>
+        <p class="form__error" id="form-error" role="alert" hidden>Vul je naam in en vink de toestemming aan.</p>
         <button type="submit" class="btn btn--dark btn--block">Verstuur via WhatsApp</button>
         <p class="form__note">Je bericht wordt geopend in WhatsApp. Je verstuurt het zelf.</p>
       </form>

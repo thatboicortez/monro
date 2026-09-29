@@ -431,15 +431,9 @@ def contact(lang):
             <input id="f-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel">
           </div>
         </div>
-        <div class="form__row">
-          <div class="field">
-            <label class="field__label" for="f-email">{e(f['email'])}</label>
-            <input id="f-email" type="email" name="email" autocomplete="email">
-          </div>
-          <div class="field field--select">
-            <label class="field__label" for="f-service">{e(f['service'])}</label>
-            <select id="f-service" name="service">{opts}</select>
-          </div>
+        <div class="field field--select">
+          <label class="field__label" for="f-service">{e(f['service'])}</label>
+          <select id="f-service" name="service">{opts}</select>
         </div>
         <div class="field">
           <label class="field__label" for="f-message">{e(f['message'])}</label>

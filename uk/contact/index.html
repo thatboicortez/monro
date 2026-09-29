@@ -79,19 +79,13 @@
             <input id="f-name" type="text" name="name" autocomplete="name" required>
           </div>
           <div class="field">
-            <label class="field__label" for="f-phone">Номер телефону</label>
+            <label class="field__label" for="f-phone">Номер телефону (необов&#x27;язково)</label>
             <input id="f-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel">
           </div>
         </div>
-        <div class="form__row">
-          <div class="field">
-            <label class="field__label" for="f-email">E-mail</label>
-            <input id="f-email" type="email" name="email" autocomplete="email">
-          </div>
-          <div class="field field--select">
-            <label class="field__label" for="f-service">Процедура</label>
-            <select id="f-service" name="service"><option value="consult">Діагностика / консультація</option><option value="reiniging">Чистка та детокс шкіри</option><option value="contour">Контурна пластика</option><option value="laser">Лазерне омолодження</option><option value="unsure">Ще не знаю</option></select>
-          </div>
+        <div class="field field--select">
+          <label class="field__label" for="f-service">Процедура</label>
+          <select id="f-service" name="service"><option value="consult">Діагностика / консультація</option><option value="reiniging">Чистка та детокс шкіри</option><option value="contour">Контурна пластика</option><option value="laser">Лазерне омолодження</option><option value="unsure">Ще не знаю</option></select>
         </div>
         <div class="field">
           <label class="field__label" for="f-message">Питання чи коментар (необов&#x27;язково)</label>
@@ -101,7 +95,7 @@
           <input type="checkbox" name="consent" required>
           <span>Я погоджуюся, що мої дані будуть використані для зв&#x27;язку зі мною.</span>
         </label>
-        <p class="form__error" id="form-error" role="alert" hidden>Вкажіть ім&#x27;я, телефон або e-mail і позначте згоду.</p>
+        <p class="form__error" id="form-error" role="alert" hidden>Вкажіть ім&#x27;я та позначте згоду.</p>
         <button type="submit" class="btn btn--dark btn--block">Надіслати у WhatsApp</button>
         <p class="form__note">Повідомлення відкриється у WhatsApp. Ви надішлете його самі.</p>
       </form>

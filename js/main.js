@@ -72,16 +72,11 @@
     var f = form.elements;
     var name = f.name.value.trim();
     var phone = f.phone.value.trim();
-    var email = f.email.value.trim();
 
+    // Telefoon is optioneel: via WhatsApp ziet Tetiana het nummer toch al.
     form.querySelectorAll(".is-invalid").forEach(function (el) { el.classList.remove("is-invalid"); });
     var ok = true;
     if (!name) { f.name.closest(".field").classList.add("is-invalid"); ok = false; }
-    if (!phone && !email) {
-      f.phone.closest(".field").classList.add("is-invalid");
-      f.email.closest(".field").classList.add("is-invalid");
-      ok = false;
-    }
     if (!f.consent.checked) { f.consent.closest(".check").classList.add("is-invalid"); ok = false; }
     errorEl.hidden = ok;
     if (!ok) return;
@@ -92,7 +87,6 @@
       "",
       label("name") + ": " + name,
       phone ? label("phone") + ": " + phone : null,
-      email ? label("email") + ": " + email : null,
       label("service") + ": " + select.options[select.selectedIndex].text,
       f.message.value.trim() ? "\n" + f.message.value.trim() : null
     ].filter(function (l) { return l !== null; });

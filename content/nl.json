@@ -121,8 +121,7 @@
 
   "form": {
     "name": "Naam",
-    "phone": "Telefoonnummer",
-    "email": "E-mail",
+    "phone": "Telefoonnummer (optioneel)",
     "service": "Behandeling",
     "consult": "Huidanalyse / advies",
     "unsure": "Weet ik nog niet",
@@ -132,7 +131,7 @@
     "submitEmail": "Verstuur via e-mail",
     "note": "Je bericht wordt geopend in WhatsApp. Je verstuurt het zelf.",
     "noteEmail": "Je bericht wordt geopend in je e-mailprogramma. Je verstuurt het zelf.",
-    "error": "Vul je naam in, een telefoonnummer of e-mail, en vink de toestemming aan.",
+    "error": "Vul je naam in en vink de toestemming aan.",
     "subject": "Afspraakaanvraag via website"
   },
 
