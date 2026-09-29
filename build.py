@@ -117,9 +117,12 @@ def header(lang, page):
 
     langs = []
     for l in LANGS:
-        target = url(page, l) if page in SLUGS else url("home", l)
         cur = ' aria-current="true"' if l == lang else ""
-        langs.append(f'<a class="lang__link" href="{target}" hreflang="{l}" lang="{l}"{cur}>{LANG_LABEL[l]}</a>')
+        if page in SLUGS:
+            langs.append(f'<a class="lang__link" href="{url(page, l)}" hreflang="{l}" lang="{l}"{cur}>{LANG_LABEL[l]}</a>')
+        else:
+            # 404: taal wisselen op dezelfde pagina (zie main.js), niet naar de homepage springen
+            langs.append(f'<a class="lang__link" href="#" data-switch-lang="{l}" lang="{l}"{cur}>{LANG_LABEL[l]}</a>')
     lang_switch = '<span class="lang__sep" aria-hidden="true">/</span>'.join(langs)
     cta_cur = ' aria-current="page"' if page == "contact" else ""
 
@@ -475,6 +478,50 @@ def not_found(lang):
     return head(lang, "404", p["title"], p["text"]) + header(lang, "404") + body + footer(lang)
 
 
+def not_found_bilingual():
+    """GitHub Pages kent maar één 404.html. Die bevat beide talen; een klein script kiest
+    de taal: eerst een keuze via de taalknop op deze pagina, dan /uk/ in het adres,
+    dan de laatst bekeken taal op de site, anders Nederlands."""
+    script_tag = f'<script src="{asset("/js/main.js")}" defer></script>'
+    nl = not_found("nl").replace(script_tag, "")
+    uk = not_found("uk").replace(script_tag, "")
+    uk_body = uk.split('<body data-page="404">', 1)[1].rsplit("</body>", 1)[0]
+    t_uk = T["uk"]["notFound"]
+
+    chooser_head = r"""<script>
+  (function () {
+    var lang = "nl", pick, last;
+    try { pick = sessionStorage.getItem("monro-404:" + location.pathname); last = localStorage.getItem("monro-lang"); } catch (e) {}
+    if (pick === "nl" || pick === "uk") lang = pick;
+    else if (/^\/uk(\/|$)/.test(location.pathname)) lang = "uk";
+    else if (last === "uk") lang = "uk";
+    window.MONRO_404_LANG = lang;
+    if (lang === "uk") document.documentElement.classList.add("swap-uk");
+  })();
+  </script>
+  <style>html.swap-uk body { visibility: hidden; }</style>
+</head>"""
+    swap = f"""
+  <template id="page-uk">{uk_body}</template>
+  <script>
+  (function () {{
+    if (window.MONRO_404_LANG === "uk") {{
+      document.body.replaceChildren(document.getElementById("page-uk").content.cloneNode(true));
+      document.documentElement.lang = "uk";
+      document.title = {json.dumps(t_uk["title"], ensure_ascii=False)};
+      document.documentElement.classList.remove("swap-uk");
+    }}
+    var s = document.createElement("script");
+    s.src = "{asset('/js/main.js')}";
+    document.body.appendChild(s);
+  }})();
+  </script>
+</body>"""
+    nl = nl.replace("</head>", chooser_head, 1)
+    nl = nl.rsplit("</body>", 1)[0].rstrip() + swap + "\n</html>\n"
+    return nl
+
+
 PAGES = {"home": home, "treatments": treatments, "about": about, "process": process, "contact": contact}
 
 
@@ -492,7 +539,7 @@ def main():
         prefix = "" if lang == "nl" else "uk/"
         for key, fn in PAGES.items():
             write(prefix + SLUGS[key] + "index.html", fn(lang))
-    write("404.html", not_found("nl"))
+    write("404.html", not_found_bilingual())
 
     if CFG.get("siteUrl"):
         base = CFG["siteUrl"].rstrip("/")

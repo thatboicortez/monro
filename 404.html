@@ -15,6 +15,18 @@
   <link rel="stylesheet" href="/css/fonts.css?v=8c6cdbb1">
   <link rel="stylesheet" href="/css/style.css?v=bd04c388">
   <script>document.documentElement.classList.add("js")</script>
+<script>
+  (function () {
+    var lang = "nl", pick, last;
+    try { pick = sessionStorage.getItem("monro-404:" + location.pathname); last = localStorage.getItem("monro-lang"); } catch (e) {}
+    if (pick === "nl" || pick === "uk") lang = pick;
+    else if (/^\/uk(\/|$)/.test(location.pathname)) lang = "uk";
+    else if (last === "uk") lang = "uk";
+    window.MONRO_404_LANG = lang;
+    if (lang === "uk") document.documentElement.classList.add("swap-uk");
+  })();
+  </script>
+  <style>html.swap-uk body { visibility: hidden; }</style>
 </head>
 <body data-page="404">
   <a class="skip" href="#main">Naar de inhoud</a>
@@ -31,7 +43,7 @@
         <span class="brand__sub">cosmetologie</span>
       </a>
       <div class="header__actions">
-        <div class="lang"><a class="lang__link" href="/" hreflang="nl" lang="nl" aria-current="true">NL</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__link" href="/uk/" hreflang="uk" lang="uk">UA</a></div>
+        <div class="lang"><a class="lang__link" href="#" data-switch-lang="nl" lang="nl" aria-current="true">NL</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__link" href="#" data-switch-lang="uk" lang="uk">UA</a></div>
         <a class="btn btn--dark btn--sm header__cta" href="/contact/">Afspraak maken</a>
         <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="mobile-menu">
           <span class="burger__lines" aria-hidden="true"></span>
@@ -88,6 +100,92 @@
       
     </div>
   </footer>
-  <script src="/js/main.js?v=abbffa96" defer></script>
+  <template id="page-uk">
+  <a class="skip" href="#main">До змісту</a>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <nav class="header__nav" aria-label="Menu">
+        <a href="/uk/behandelingen/">Процедури</a>
+        <a href="/uk/over/">Про мене</a>
+        <a href="/uk/werkwijze/">Як я працюю</a>
+      </nav>
+      <a class="brand" href="/uk/" aria-label="Monro, Головна">
+        <span class="brand__name">Monro</span>
+        <span class="brand__sub">косметологія</span>
+      </a>
+      <div class="header__actions">
+        <div class="lang"><a class="lang__link" href="#" data-switch-lang="nl" lang="nl">NL</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__link" href="#" data-switch-lang="uk" lang="uk" aria-current="true">UA</a></div>
+        <a class="btn btn--dark btn--sm header__cta" href="/uk/contact/">Записатися</a>
+        <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="burger__lines" aria-hidden="true"></span>
+          <span class="sr">Меню</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="header-sentinel" aria-hidden="true"></div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Меню">
+      <a href="/uk/">Головна</a>
+      <a href="/uk/behandelingen/">Процедури</a>
+        <a href="/uk/over/">Про мене</a>
+        <a href="/uk/werkwijze/">Як я працюю</a>
+    </nav>
+    <a class="btn btn--dark btn--block" href="/uk/contact/">Записатися</a>
+  </div>
+
+  <main id="main">
+    <section class="not-found">
+      <h1 class="page-head__title">Такої сторінки не існує.</h1>
+      <p class="page-head__lead">Можливо, посилання застаріло. Поверніться на головну або перегляньте процедури.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--dark" href="/uk/">На головну</a>
+        <a class="btn btn--ghost" href="/uk/behandelingen/">Процедури</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a class="brand__name brand__name--lg" href="/uk/">Monro</a>
+        <p>Індивідуальна косметологія у Віссенкерке, Зеландія.</p>
+      </div>
+      <nav class="footer__col" aria-label="Навігація">
+        <p class="footer__label">Навігація</p>
+        <a href="/uk/behandelingen/">Процедури</a>
+        <a href="/uk/over/">Про мене</a>
+        <a href="/uk/werkwijze/">Як я працюю</a>
+        <a href="/uk/contact/">Записатися</a>
+      </nav>
+      <div class="footer__col">
+        <p class="footer__label">Контакти</p>
+        <a href="tel:+31621931150">+31 (0)6 21 93 11 50</a>
+        <a href="https://wa.me/31621931150" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/babichenko_tetiana/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Julianastraat+28+Wissenkerke" target="_blank" rel="noopener">Julianastraat 28, Wissenkerke</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Monro. Усі права захищено.</span>
+      
+    </div>
+  </footer>
+  
+</template>
+  <script>
+  (function () {
+    if (window.MONRO_404_LANG === "uk") {
+      document.body.replaceChildren(document.getElementById("page-uk").content.cloneNode(true));
+      document.documentElement.lang = "uk";
+      document.title = "Сторінку не знайдено | Monro";
+      document.documentElement.classList.remove("swap-uk");
+    }
+    var s = document.createElement("script");
+    s.src = "/js/main.js?v=75e50c85";
+    document.body.appendChild(s);
+  })();
+  </script>
 </body>
 </html>

@@ -1,6 +1,28 @@
 (function () {
   "use strict";
 
+  /* ---------- Taal ---------- */
+  var is404 = document.body.getAttribute("data-page") === "404";
+  // Laatst bekeken taal onthouden, zodat de 404-pagina in dezelfde taal verschijnt.
+  if (!is404) {
+    try { localStorage.setItem("monro-lang", document.documentElement.lang); } catch (e) {}
+  }
+  document.querySelectorAll(".lang__link").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var target = a.getAttribute("data-switch-lang");
+      if (target) {
+        // 404: zelfde pagina, andere taal (404.html kiest de taal bij het laden)
+        e.preventDefault();
+        try { sessionStorage.setItem("monro-404:" + location.pathname, target); } catch (err) {}
+        location.reload();
+      } else if (location.search || location.hash) {
+        // Gekozen behandeling (?behandeling=...) en anker (#...) meenemen naar de andere taal
+        e.preventDefault();
+        location.href = a.getAttribute("href") + location.search + location.hash;
+      }
+    });
+  });
+
   /* ---------- Header: rand zodra de pagina gescrold is ---------- */
   var header = document.getElementById("header");
   var sentinel = document.querySelector(".header-sentinel");
