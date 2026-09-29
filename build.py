@@ -85,7 +85,7 @@ def head(lang, page, title, desc):
 <html lang="{lang}">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{e(title)}</title>
   <meta name="description" content="{e(desc)}">
   <meta name="theme-color" content="#F4F0EA">
