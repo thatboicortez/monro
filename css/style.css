@@ -31,11 +31,11 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-/* De "canvas" onder de pagina heeft de kleur van de footer: zo is er op iPhone
-   (Safari-werkbalk, onderkant) nooit een lichte strook onder de footer. */
+/* Canvas-kleur volgt de positie: crème bovenaan, donker zodra de footer in beeld is
+   (class via main.js). Zo is er bij over-scrollen op iPhone nooit een verkeerde strook,
+   en blijft trekken-om-te-verversen gewoon werken. */
 html {
-  background: var(--dark);
-  overscroll-behavior-y: none;
+  background: var(--bg);
   /* Geen zoom bij dubbeltikken (bv. op de header); knijpzoom blijft werken. */
   touch-action: manipulation;
   scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); -webkit-text-size-adjust: 100%;
@@ -53,6 +53,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+html.at-footer { background: var(--dark); }
 main { flex: 1 0 auto; }
 .footer { flex-shrink: 0; }
 img { display: block; max-width: 100%; height: auto; }

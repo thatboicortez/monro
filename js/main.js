@@ -10,6 +10,14 @@
     }).observe(sentinel);
   }
 
+  /* ---------- Canvas-kleur: donker zodra de footer zichtbaar is ---------- */
+  var footer = document.querySelector(".footer");
+  if (footer && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      document.documentElement.classList.toggle("at-footer", entries[0].isIntersecting);
+    }).observe(footer);
+  }
+
   /* ---------- Mobiel menu ---------- */
   var burger = document.getElementById("burger");
   var menu = document.getElementById("mobile-menu");
