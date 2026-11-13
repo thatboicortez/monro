@@ -62,8 +62,11 @@ def tel_href():
     return "tel:" + "".join(c for c in CFG["phone"].replace("(0)", "") if c.isdigit() or c == "+")
 
 
-def price(t, amount):
-    return f'{e(t["common"]["from"])} €{amount}'
+def price(t, tr):
+    """Vaste prijs (€70) of vanafprijs (vanaf €65) voor behandelingen met varianten."""
+    if "price" in tr:
+        return f"€{tr['price']}"
+    return f'{e(t["common"]["from"])} €{tr["priceFrom"]}'
 
 
 def duration(t, value):
@@ -229,7 +232,7 @@ def page_head(title, lead):
 def home(lang):
     t, h = T[lang], T[lang]["home"]
     rows = []
-    for tr in CFG["treatments"]:
+    for tr in (x for x in CFG["treatments"] if x.get("signature")):
         c = t["treatments"][tr["id"]]
         rows.append(f"""
           <li class="reveal">
@@ -237,7 +240,7 @@ def home(lang):
               <span class="tlist__img"><img src="/images/{tr['image']}" alt="" loading="lazy" width="400" height="500"></span>
               <span class="tlist__name">{e(c['name'])}</span>
               <span class="tlist__short">{e(c['short'])}</span>
-              <span class="tlist__price">{price(t, tr['price'])}</span>
+              <span class="tlist__price">{price(t, tr)}</span>
               <span class="tlist__arrow" aria-hidden="true">→</span>
             </a>
           </li>""")
@@ -299,23 +302,44 @@ def treatments(lang):
     for tr in CFG["treatments"]:
         c = t["treatments"][tr["id"]]
         index.append(f"""
-          <li><a href="#{tr['id']}"><span>{e(c['name'])}</span><span class="tp__index-price">{price(t, tr['price'])}</span></a></li>""")
-        tags = "".join(f"<li>{e(x)}</li>" for x in c["includes"])
+          <li><a href="#{tr['id']}"><span>{e(c['name'])}</span><span class="tp__index-price">{price(t, tr)}</span></a></li>""")
+
+        variants = ""
+        if tr.get("variants"):
+            rows = "".join(f"""
+              <li><span class="variants__name">{e(c['variants'][v['id']]['name'])}</span><span class="variants__text">{e(c['variants'][v['id']]['text'])}</span><span class="variants__price">€{v['price']}</span></li>"""
+                           for v in tr["variants"])
+            variants = f"""
+          <p class="tr__label">{e(c['variantsTitle'])}</p>
+          <ul class="variants">{rows}
+          </ul>"""
+        steps = "".join(f"<li>{e(s)}</li>" for s in c["steps"])
+        note = f'\n          <p class="tr__note">{e(c["note"])}</p>' if c.get("note") else ""
         articles.append(f"""
-        <article class="tr" id="{tr['id']}">
-          <div class="tr__media reveal"><img src="/images/{tr['image']}" alt="" loading="lazy" width="1000" height="1250"></div>
-          <div class="tr__body">
-            <h2 class="tr__title reveal">{e(c['name'])}</h2>
-            <p class="tr__desc reveal">{e(c['desc'])}</p>
-            <p class="tr__label reveal">{e(p['includes'])}</p>
-            <ul class="tags reveal">{tags}</ul>
-            <dl class="meta reveal">
-              <div><dt>{e(t['common']['duration'])}</dt><dd>{duration(t, tr['duration'])}</dd></div>
-              <div><dt>{e(t['common']['price'])}</dt><dd>{price(t, tr['price'])}</dd></div>
-            </dl>
-            <a class="btn btn--dark reveal" href="{url('contact', lang)}?behandeling={tr['id']}">{e(t['nav']['book'])}</a>
+        <article class="tr reveal" id="{tr['id']}">
+          <div class="tr__head">
+            <h2 class="tr__title">{e(c['name'])}</h2>
+            <p class="tr__meta"><span>{duration(t, tr['duration'])}</span><span class="tr__price">{price(t, tr)}</span></p>
           </div>
+          <p class="tr__desc">{e(c['desc'])}</p>{variants}
+          <details class="steps">
+            <summary>{e(p['steps'])}<span class="faq__icon" aria-hidden="true"></span></summary>
+            <ol>{steps}</ol>
+          </details>{note}
+          <a class="link-arrow" href="{url('contact', lang)}?behandeling={tr['id']}">{e(t['nav']['book'])}</a>
         </article>""")
+
+    boosters = "".join(f"""
+          <li><span>{e(t['boosters'][b['id']])}</span><span class="boosters__price">+€{b['price']}</span></li>""" for b in CFG.get("boosters", []))
+    boosters_block = f"""
+        <section class="boosters reveal" id="boosters">
+          <h2 class="tr__title">{e(p['boostersTitle'])}</h2>
+          <p class="tr__desc">{e(p['boostersText'])}</p>
+          <ul class="boosters__list">{boosters}
+          </ul>
+          <p class="tr__note">{e(p['boostersNote'])}</p>
+        </section>""" if boosters else ""
+
     body = f"""
   <main id="main">{page_head(p['h1'], p['lead'])}
     <div class="tp">
@@ -324,7 +348,7 @@ def treatments(lang):
         </ul>
         <p class="tp__note">{e(p['note'])}</p>
       </aside>
-      <div class="tp__list">{''.join(articles)}
+      <div class="tp__list">{''.join(articles)}{boosters_block}
       </div>
     </div>
 {cta_band(lang)}

@@ -237,27 +237,46 @@ ul, ol { padding: 0; list-style: none; }
 .cta-band__text { color: var(--ink-2); max-width: 52ch; margin-top: 18px; font-size: 17px; }
 
 /* ---------- Behandelingen-pagina ---------- */
-.tp { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: 300px 1fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
+.tp { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: 330px 1fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
 .tp__index { position: sticky; top: calc(var(--header-h) + 32px); }
 .tp__index ul { border-top: 1px solid var(--ink); }
-.tp__index a { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 15px; transition: color .2s; }
+.tp__index a { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; transition: color .2s; }
 .tp__index a:hover { color: var(--accent); }
 .tp__index-price { color: var(--ink-3); white-space: nowrap; }
 .tp__note { font-size: 13px; color: var(--ink-3); margin-top: 20px; }
 
-.tp__list { display: flex; flex-direction: column; gap: clamp(72px, 9vw, 120px); }
-.tr { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; scroll-margin-top: calc(var(--header-h) + 32px); }
-.tr__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
-.tr__title { font-family: var(--serif); font-size: clamp(30px, 3vw, 44px); line-height: 1.1; }
-.tr__desc { color: var(--ink-2); font-size: 17px; margin-top: 18px; }
-.tr__label { font-size: 13px; font-weight: 600; margin-top: 28px; }
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.tags li { padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; }
-.meta { display: grid; grid-template-columns: 1fr 1fr; margin: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.meta div { padding: 14px 0; }
-.meta div + div { padding-left: 18px; border-left: 1px solid var(--line); }
-.meta dt { font-size: 12px; font-weight: 600; color: var(--ink-3); }
-.meta dd { margin-top: 4px; font-size: 18px; font-weight: 500; }
+.tp__index { max-height: calc(100dvh - var(--header-h) - 64px); overflow-y: auto; scrollbar-width: thin; }
+.tp__list { display: flex; flex-direction: column; }
+
+/* Eén behandeling: kop met duur en prijs, beschrijving, varianten, uitklapbare stappen */
+.tr { padding: clamp(32px, 4vw, 48px) 0; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 24px); }
+.tr:first-child { padding-top: 0; border-top: 0; }
+.tr__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 32px; flex-wrap: wrap; }
+.tr__title { font-family: var(--serif); font-size: clamp(26px, 2.6vw, 38px); line-height: 1.12; }
+.tr__meta { display: flex; align-items: baseline; gap: 18px; white-space: nowrap; color: var(--ink-2); font-size: 15px; }
+.tr__price { color: var(--ink); font-size: 20px; font-weight: 500; }
+.tr__desc { color: var(--ink-2); font-size: 17px; margin-top: 16px; max-width: 62ch; }
+.tr__label { font-size: 13px; font-weight: 600; margin-top: 24px; }
+.tr__note { font-size: 14px; color: var(--ink-3); margin-top: 16px; max-width: 62ch; }
+.tr .link-arrow { margin-top: 24px; }
+
+.variants { margin-top: 10px; border-top: 1px solid var(--line); }
+.variants li { display: grid; grid-template-columns: minmax(0, 13em) minmax(0, 1fr) auto; gap: 4px 20px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.variants__name { font-weight: 500; }
+.variants__text { color: var(--ink-2); font-size: 15px; }
+.variants__price { font-weight: 500; white-space: nowrap; }
+
+.steps { margin-top: 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.steps summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 0; cursor: pointer; list-style: none; font-size: 15px; font-weight: 500; }
+.steps summary::-webkit-details-marker { display: none; }
+.steps[open] .faq__icon::after { transform: rotate(0); }
+.steps ol { margin: 0 0 18px; padding-left: 1.3em; list-style: decimal; color: var(--ink-2); display: grid; gap: 6px; }
+.steps ol li::marker { color: var(--accent); }
+
+.boosters { margin-top: clamp(16px, 3vw, 32px); padding: clamp(24px, 3vw, 36px); background: var(--bg-2); border-radius: var(--radius); }
+.boosters__list { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+.boosters__list li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.boosters__price { font-weight: 500; white-space: nowrap; }
 
 /* ---------- Over mij ---------- */
 .about-hero {
@@ -387,7 +406,7 @@ ul, ol { padding: 0; list-style: none; }
   .tlist__row { grid-template-columns: minmax(0, 1fr) auto auto; }
   .tlist__short { display: none; }
   .tp { grid-template-columns: 1fr; }
-  .tp__index { position: static; }
+  .tp__index { position: static; max-height: none; overflow: visible; }
   .values { grid-template-columns: 1fr; }
 }
 @media (max-width: 860px) {
@@ -406,8 +425,9 @@ ul, ol { padding: 0; list-style: none; }
   .tlist__name { grid-column: 2; align-self: end; font-size: 22px; }
   .tlist__price { grid-column: 2; align-self: start; font-size: 14px; color: var(--ink-2); }
   .dark-split__inner, .about-hero, .contact, .faq { grid-template-columns: 1fr; }
-  .tr { grid-template-columns: 1fr; }
-  .tr__media img { aspect-ratio: 4 / 3; }
+  .variants li { grid-template-columns: minmax(0, 1fr) auto; }
+  .variants__text { grid-column: 1 / -1; grid-row: 2; }
+  .boosters__list { grid-template-columns: 1fr; }
   .pstep { grid-template-columns: 1fr; gap: 10px; }
   .wide-image img { aspect-ratio: 4 / 3; }
   .cta-band__inner { grid-template-columns: 1fr; align-items: start; }

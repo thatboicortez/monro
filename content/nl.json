@@ -2,7 +2,6 @@
   "langName": "Nederlands",
   "brandSub": "cosmetologie",
   "skip": "Naar de inhoud",
-
   "nav": {
     "treatments": "Behandelingen",
     "about": "Over mij",
@@ -11,7 +10,6 @@
     "menu": "Menu",
     "home": "Home"
   },
-
   "common": {
     "min": "min",
     "from": "vanaf",
@@ -22,51 +20,227 @@
     "ctaText": "Laat je gegevens achter of stuur een WhatsApp-bericht. Je krijgt zo snel mogelijk een voorstel voor een datum en tijd.",
     "cosmetologist": "cosmetoloog"
   },
-
   "home": {
-    "title": "Monro | Cosmetologie in Wissenkerke",
-    "desc": "Persoonlijke huidbehandelingen in Wissenkerke, Zeeland. Huidreiniging, contourcorrectie en laserverjonging, van huidanalyse tot nazorg.",
+    "title": "Monro | Schoonheidssalon en huidverbetering in Wissenkerke",
+    "desc": "Persoonlijke gezichtsbehandelingen in Wissenkerke, Zeeland: dieptereiniging, acnebehandeling, microneedling, peelings en meer. Van huidanalyse tot nazorg.",
     "eyebrow": "Cosmetologie in Wissenkerke",
     "heroTitle": "Zorg voor je huid,",
     "heroAccent": "met aandacht.",
     "heroLead": "Persoonlijke huidbehandelingen, van huidanalyse tot nazorg. Rustig, eerlijk en afgestemd op jouw huid.",
     "manifesto": "Mooie huid is geen toeval. Het is aandacht, kennis en tijd, en een plan dat bij jou past.",
-    "treatmentsTitle": "Behandelingen",
+    "treatmentsTitle": "Uitgelichte behandelingen",
     "aboutTitle": "Een studio waar je huid centraal staat.",
     "aboutText": "Bij Monro werk je met één cosmetoloog, van het eerste gesprek tot de laatste nazorgtip. Geen haast, wel de tijd om je huid echt te begrijpen.",
     "aboutLink": "Maak kennis"
   },
-
   "treatmentsPage": {
-    "title": "Behandelingen | Monro Wissenkerke",
-    "desc": "Huidreiniging en detox, contourcorrectie met fillers en laserverjonging in Wissenkerke. Bekijk duur en prijzen.",
+    "title": "Behandelingen en tarieven | Monro Wissenkerke",
+    "desc": "Gezichtsbehandelingen in Wissenkerke: dieptereiniging, acnebehandeling, microneedling, chemische peelings, elektroporatie, microcurrent en meer. Met duur en prijzen.",
     "h1": "Behandelingen",
-    "lead": "Elke behandeling begint met een gesprek en een blik op je huid. Daarna kiezen we samen wat werkt.",
-    "includes": "Wat het inhoudt",
-    "note": "Genoemde prijzen zijn vanafprijzen. Na de huidanalyse weet je precies waar je aan toe bent."
+    "lead": "Elke huid is uniek en verdient persoonlijke aandacht. Elke behandeling begint met een huidanalyse, daarna stemmen we alles af op jouw huid.",
+    "note": "De behandelingen worden afgestemd op jouw huidconditie. Eventuele extra kosten worden vooraf besproken.",
+    "steps": "Zo verloopt de behandeling",
+    "boostersTitle": "Extra serumboosters",
+    "boostersText": "Toe te voegen aan een behandeling, in overleg.",
+    "boostersNote": "De genoemde bedragen zijn richtprijzen voor aanvullende werkstoffen."
   },
-
   "treatments": {
-    "reiniging": {
-      "name": "Huidreiniging & detox",
-      "short": "Dieptereiniging, peelings en maskers voor een frisse, stralende huid.",
-      "desc": "Een grondige behandeling die de huid reinigt, vernieuwt en weer laat stralen. Geschikt als start van je huidtraject of als vast onderhoud.",
-      "includes": ["Dieptereiniging", "Peelings", "Maskers", "Verzorgende behandelingen"]
+    "dieptereiniging": {
+      "name": "Multimodale dieptereiniging",
+      "short": "Grondige reiniging van de huid, mee-eters en verstopte poriën.",
+      "desc": "Een uitgebreide behandeling voor het reinigen van de huid, het verwijderen van mee-eters en het verzorgen van verstopte poriën.",
+      "steps": [
+        "Huidanalyse en intake (10 min)",
+        "Make-up verwijderen en reinigen (10 min)",
+        "Voorbereiding, enzymatische peeling of ultrasone reiniging (15 min)",
+        "Handmatige dieptereiniging indien geschikt (40 min)",
+        "Kalmerende huidverzorging (10 min)",
+        "Verzorgend gezichtsmasker (20 min)",
+        "Afsluitende verzorging, SPF en advies (15 min)"
+      ],
+      "note": "De reinigingsmethoden worden afgestemd op de gevoeligheid van de huid en eventuele contra-indicaties."
     },
-    "contour": {
-      "name": "Contourcorrectie",
-      "short": "Subtiele correctie van lippen, jukbeenderen en kin met gecertificeerde fillers.",
-      "desc": "Voor meer volume of een mooiere lijn, met een natuurlijk resultaat als uitgangspunt. We bespreken vooraf samen wat bij jouw gezicht past.",
-      "includes": ["Lippen", "Jukbeenderen", "Kin", "Gecertificeerde fillers"]
+    "acne": {
+      "name": "Uitgebreide acnebehandeling",
+      "short": "Voor een huid die gevoelig is voor acne, mee-eters en overmatige talgproductie.",
+      "desc": "Een persoonlijke behandeling voor een huid die gevoelig is voor acne, mee-eters en overmatige talgproductie.",
+      "steps": [
+        "Huidanalyse en bespreking van de huidverzorgingsroutine (10 min)",
+        "Milde reiniging (10 min)",
+        "Voorbereiding en geschikte exfoliatie (15 min)",
+        "Verwijderen van mee-eters waar dit veilig mogelijk is (maximaal 40 min)",
+        "Talgregulerende en kalmerende verzorging (15 min)",
+        "Speciaal gezichtsmasker (20 min)",
+        "Afsluitende verzorging en thuisadvies (10 min)"
+      ],
+      "note": "Bij ernstige of sterk ontstoken acne wordt een beoordeling door de huisarts of dermatoloog geadviseerd."
     },
-    "laser": {
-      "name": "Laserverjonging",
-      "short": "Minder pigmentatie, een gladdere huidstructuur en meer collageen.",
-      "desc": "Behandelingen die de huid van binnenuit vernieuwen. Het aantal sessies hangt af van je huid en je wensen.",
-      "includes": ["Pigmentatie verminderen", "Huidstructuur verfijnen", "Collageen stimuleren"]
+    "couperose": {
+      "name": "Kalmerende behandeling bij couperose",
+      "short": "Zachte verzorging voor een gevoelige huid met roodheid of zichtbare vaatjes.",
+      "desc": "Een zachte, verzorgende gezichtsbehandeling voor een gevoelige huid met zichtbare roodheid of vaatjes.",
+      "steps": [
+        "Beoordeling van de huidgevoeligheid",
+        "Zachte gezichtsreiniging",
+        "Milde, kalmerende verzorging",
+        "Serum ter ondersteuning van de huidbarrière",
+        "Kalmerend gezichtsmasker",
+        "Beschermende crème en SPF",
+        "Persoonlijk huidverzorgingsadvies"
+      ],
+      "note": "Deze behandeling verwijdert geen bloedvaatjes en vervangt geen medische behandeling van rosacea."
+    },
+    "microneedling": {
+      "name": "Microneedling gezicht",
+      "short": "Voor het uiterlijk van de huidstructuur, fijne lijntjes en acnelittekens.",
+      "desc": "Een professionele behandeling gericht op het verbeteren van het uiterlijk van de huidstructuur, fijne lijntjes en acnelittekens.",
+      "steps": [
+        "Intake en controle op contra-indicaties",
+        "Reiniging en voorbereiding",
+        "Desinfectie van de huid",
+        "Microneedling met een steriele wegwerpcartridge en geschikte steriele producten",
+        "Kalmerende nazorg",
+        "Advies voor huidherstel en zonbescherming"
+      ],
+      "note": "De behandeling wordt niet uitgevoerd op actieve ontstekingen."
+    },
+    "peeling": {
+      "name": "Professionele chemische peelings",
+      "short": "Zes peelings, telkens met voorbereiding en passende professionele verzorging.",
+      "desc": "Bij MONRO is een peeling meer dan alleen het aanbrengen van een zuur. De behandeling wordt zorgvuldig afgestemd op de huidconditie en gecombineerd met passende professionele verzorging.",
+      "variantsTitle": "Beschikbare peelings",
+      "variants": {
+        "melkzuur": {
+          "name": "Melkzuurpeeling",
+          "text": "Milde exfoliatie en verzorging bij een doffe, vochtarme huid."
+        },
+        "amandelzuur": {
+          "name": "Amandelzuurpeeling",
+          "text": "Voor een onregelmatige huidstructuur en een huid die snel verstopt raakt."
+        },
+        "glycolzuur": {
+          "name": "Glycolzuurpeeling",
+          "text": "Voor het vernieuwen van het huidoppervlak en een frissere uitstraling."
+        },
+        "salicylzuur": {
+          "name": "Salicylzuurpeeling",
+          "text": "Bij een vette huid, mee-eters en neiging tot onzuiverheden."
+        },
+        "pyrodruivenzuur": {
+          "name": "Pyrodruivenzuurpeeling",
+          "text": "Professionele vernieuwing bij een onregelmatige huidstructuur."
+        },
+        "retinol": {
+          "name": "Retinolpeeling",
+          "text": "Voor tekenen van huidveroudering door zonlicht en een onregelmatige teint."
+        }
+      },
+      "steps": [
+        "Huidanalyse en intake",
+        "Grondige gezichtsreiniging",
+        "Voorbereiding van de huid",
+        "Aanbrengen van de geselecteerde peeling",
+        "Verwijderen of neutraliseren indien voorgeschreven",
+        "Kalmerend masker indien geschikt voor de gekozen peeling",
+        "Afsluitende verzorging en zonbescherming",
+        "Persoonlijk advies voor de dagen na de behandeling"
+      ],
+      "note": "Bij sommige retinolpeelings blijft het product volgens het behandelprotocol nog enige tijd op de huid. De nazorg wordt hierop afgestemd."
+    },
+    "elektroporatie": {
+      "name": "Elektroporatie, mesotherapie zonder naalden",
+      "short": "Naaldloze behandeling met een professioneel serum.",
+      "desc": "Een naaldloze behandeling waarbij elektrische impulsen worden gebruikt om de opname van bepaalde cosmetische werkstoffen in de huid te ondersteunen.",
+      "steps": [
+        "Huidanalyse",
+        "Gezichtsreiniging",
+        "Milde voorbereiding",
+        "Aanbrengen van een passend serum",
+        "Elektroporatiebehandeling",
+        "Hydraterend of kalmerend masker",
+        "Afsluitende verzorging en SPF"
+      ]
+    },
+    "microcurrent": {
+      "name": "Microcurrent gezichtsbehandeling",
+      "short": "Zachte behandeling met microstromen voor uitstraling en gezichtscontouren.",
+      "desc": "Een zachte behandeling met microstromen, gericht op het tijdelijk verbeteren van de uitstraling en de gezichtscontouren.",
+      "variantsTitle": "Keuze",
+      "variants": {
+        "kort": {
+          "name": "45 minuten",
+          "text": "Microcurrentbehandeling"
+        },
+        "lang": {
+          "name": "60 minuten",
+          "text": "Inclusief uitgebreide verzorging met serum en masker"
+        }
+      },
+      "steps": [
+        "Intake en controle op contra-indicaties",
+        "Gezichtsreiniging",
+        "Aanbrengen van contactgel",
+        "Microcurrentbehandeling van de geselecteerde gezichtszones",
+        "Verwijderen van de gel",
+        "Hydraterende en afsluitende verzorging"
+      ],
+      "note": "Bij de behandeling van 60 minuten is extra tijd voorzien voor serum en masker."
+    },
+    "chiromassage": {
+      "name": "Spaanse chiromassage gezicht",
+      "short": "Ontspannende gezichtsmassage met vloeiende, ritmische technieken.",
+      "desc": "Een ontspannende gezichtsmassage met vloeiende, ritmische en gevarieerde manuele technieken.",
+      "steps": [
+        "Zachte gezichtsreiniging",
+        "Aanbrengen van een geschikt massageproduct",
+        "Uitgebreide chiromassage van gezicht, hals en eventueel decolleté",
+        "Afsluitende huidverzorging"
+      ]
+    },
+    "serum": {
+      "name": "Intensieve serumbehandeling",
+      "short": "Professionele serums voor hydratatie, een doffe huid of de eerste tekenen van huidveroudering.",
+      "desc": "Een verzorgende behandeling met professionele serums, afgestemd op hydratatie, een doffe huid, gevoeligheid of de eerste tekenen van huidveroudering.",
+      "steps": [
+        "Huidanalyse",
+        "Reiniging en milde voorbereiding",
+        "Aanbrengen van een zorgvuldig gekozen serum",
+        "Aanvullende verzorging",
+        "Gezichtsmasker",
+        "Verzorgende crème en SPF"
+      ],
+      "note": "Een standaardserum is bij de prijs inbegrepen. Een extra premium serumbooster kan tegen meerprijs worden toegevoegd."
+    },
+    "glow": {
+      "name": "Glow Before You Go",
+      "short": "Frisse, milde behandeling vóór een feest, fotosessie of bijzondere gelegenheid.",
+      "desc": "Een frisse, milde behandeling vóór een feest, fotosessie of bijzondere gelegenheid.",
+      "steps": [
+        "Zachte reiniging",
+        "Milde exfoliatie indien geschikt",
+        "Hydraterend serum",
+        "Ontspannende massage of passende apparatuurbehandeling",
+        "Hydraterend masker",
+        "Afsluitende verzorging"
+      ],
+      "note": "Vóór een gelegenheid vermijden we technieken met een grote kans op zichtbare roodheid of schilfering."
+    },
+    "fullface": {
+      "name": "MONRO Full Face",
+      "short": "Complete, volledig gepersonaliseerde gezichtsbehandeling.",
+      "desc": "Een volledig gepersonaliseerde gezichtsbehandeling waarbij verschillende huidverzorgende technieken op een veilige en doordachte manier worden gecombineerd.",
+      "steps": [
+        "Uitgebreide huidanalyse",
+        "Reiniging en voorbereiding",
+        "Een geschikte peeling of milde exfoliatie",
+        "Een of meerdere zorgvuldig gekozen, onderling geschikte apparatuurbehandelingen",
+        "Professioneel serum",
+        "Verzorgend gezichtsmasker",
+        "Afsluitende verzorging en persoonlijk advies"
+      ],
+      "note": "Niet alle technieken worden standaard gecombineerd. De keuze hangt af van de huidconditie en eventuele contra-indicaties."
     }
   },
-
   "aboutPage": {
     "title": "Over mij | Monro Wissenkerke",
     "desc": "Maak kennis met Tetiana Babichenko, cosmetoloog in Wissenkerke. Persoonlijke aandacht, eerlijk advies, in het Nederlands en Oekraïens.",
@@ -76,34 +250,65 @@
     "p2": "Ik combineer bewezen technieken met eerlijk advies. Soms betekent dat een intensieve behandeling, soms juist minder doen. Het doel is altijd hetzelfde: een gezonde huid waar je je goed bij voelt.",
     "valuesTitle": "Waar ik voor sta",
     "values": [
-      { "title": "Eerst luisteren", "text": "Je wensen en je huid bepalen het plan, niet een standaardpakket." },
-      { "title": "Eerlijk advies", "text": "Je hoort wat werkt, wat het kost en wanneer iets niet nodig is." },
-      { "title": "Rust en aandacht", "text": "Eén cliënt tegelijk, in een rustige studio, zonder haast." }
+      {
+        "title": "Eerst luisteren",
+        "text": "Je wensen en je huid bepalen het plan, niet een standaardpakket."
+      },
+      {
+        "title": "Eerlijk advies",
+        "text": "Je hoort wat werkt, wat het kost en wanneer iets niet nodig is."
+      },
+      {
+        "title": "Rust en aandacht",
+        "text": "Eén cliënt tegelijk, in een rustige studio, zonder haast."
+      }
     ],
     "langTitle": "Nederlands of Oekraïens",
     "langText": "Je kunt bij mij terecht in het Nederlands en in het Oekraïens. Zo begrijp je precies wat er met je huid gebeurt."
   },
-
   "processPage": {
     "title": "Werkwijze | Monro Wissenkerke",
     "desc": "Van huidanalyse tot nazorg: zo verloopt een behandeling bij Monro in Wissenkerke. Met antwoorden op veelgestelde vragen.",
     "h1": "Werkwijze",
     "lead": "Vier stappen, één plan. Zo weet je vooraf wat je kunt verwachten.",
     "steps": [
-      { "title": "Huidanalyse", "text": "We bespreken je wensen en bekijken je huid: type, conditie en wat haar uit balans brengt." },
-      { "title": "Persoonlijk plan", "text": "Je krijgt een helder advies: welke behandelingen, in welke volgorde en wat het kost." },
-      { "title": "Behandeling", "text": "In een rustige studio, met professionele producten en alle aandacht voor comfort." },
-      { "title": "Nazorg", "text": "Advies voor thuis en een onderhoudsschema, zodat het resultaat blijft." }
+      {
+        "title": "Huidanalyse",
+        "text": "We bespreken je wensen en bekijken je huid: type, conditie en wat haar uit balans brengt."
+      },
+      {
+        "title": "Persoonlijk plan",
+        "text": "Je krijgt een helder advies: welke behandelingen, in welke volgorde en wat het kost."
+      },
+      {
+        "title": "Behandeling",
+        "text": "In een rustige studio, met professionele producten en alle aandacht voor comfort."
+      },
+      {
+        "title": "Nazorg",
+        "text": "Advies voor thuis en een onderhoudsschema, zodat het resultaat blijft."
+      }
     ],
     "faqTitle": "Veelgestelde vragen",
     "faq": [
-      { "q": "Moet ik eerst een huidanalyse laten doen?", "a": "Ja. Elke behandeling begint met een korte huidanalyse, zodat we zeker weten dat de behandeling bij je huid past." },
-      { "q": "In welke taal kan ik terecht?", "a": "In het Nederlands en in het Oekraïens." },
-      { "q": "Hoe maak ik een afspraak?", "a": "Via het formulier op de contactpagina, via WhatsApp of telefonisch. Je krijgt zo snel mogelijk een voorstel voor een datum en tijd." },
-      { "q": "Waar is de studio?", "a": "Aan de Julianastraat 28 in Wissenkerke." }
+      {
+        "q": "Moet ik eerst een huidanalyse laten doen?",
+        "a": "Ja. Elke behandeling begint met een korte huidanalyse, zodat we zeker weten dat de behandeling bij je huid past."
+      },
+      {
+        "q": "In welke taal kan ik terecht?",
+        "a": "In het Nederlands en in het Oekraïens."
+      },
+      {
+        "q": "Hoe maak ik een afspraak?",
+        "a": "Via het formulier op de contactpagina, via WhatsApp of telefonisch. Je krijgt zo snel mogelijk een voorstel voor een datum en tijd."
+      },
+      {
+        "q": "Waar is de studio?",
+        "a": "Aan de Julianastraat 28 in Wissenkerke."
+      }
     ]
   },
-
   "contactPage": {
     "title": "Afspraak maken | Monro Wissenkerke",
     "desc": "Maak een afspraak bij Monro in Wissenkerke via het formulier, WhatsApp of telefoon. Julianastraat 28, Wissenkerke.",
@@ -118,7 +323,6 @@
     "hoursValue": "Op afspraak",
     "email": "E-mail"
   },
-
   "form": {
     "name": "Naam",
     "phone": "Telefoonnummer (optioneel)",
@@ -134,7 +338,6 @@
     "error": "Vul je naam in en vink de toestemming aan.",
     "subject": "Afspraakaanvraag via website"
   },
-
   "footer": {
     "tag": "Persoonlijke cosmetologie in Wissenkerke, Zeeland.",
     "nav": "Navigatie",
@@ -142,11 +345,18 @@
     "rights": "Alle rechten voorbehouden.",
     "kvk": "KvK"
   },
-
   "notFound": {
     "title": "Pagina niet gevonden | Monro",
     "h1": "Deze pagina bestaat niet.",
     "text": "Misschien is de link verouderd. Ga terug naar de homepage of bekijk de behandelingen.",
     "home": "Naar de homepage"
+  },
+  "boosters": {
+    "hyaluron": "Hyaluronzuur",
+    "niacinamide": "Niacinamide en kalmerende werkstoffen",
+    "vitaminec": "Vitamine C",
+    "peptiden": "Peptidencomplex",
+    "teint": "Serum voor een egalere teint",
+    "premium": "Premium concentraat"
   }
 }
