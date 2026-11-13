@@ -249,7 +249,7 @@ ul, ol { padding: 0; list-style: none; }
 .tp__list { display: flex; flex-direction: column; }
 
 /* Eén behandeling: kop met duur en prijs, beschrijving, varianten, uitklapbare stappen */
-.tr { padding: clamp(32px, 4vw, 48px) 0; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 24px); }
+.tr { padding: clamp(32px, 4vw, 48px) 0; border-top: 2px solid var(--ink); scroll-margin-top: calc(var(--header-h) + 24px); }
 .tr:first-child { padding-top: 0; border-top: 0; }
 .tr__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 32px; flex-wrap: wrap; }
 .tr__title { font-family: var(--serif); font-size: clamp(26px, 2.6vw, 38px); line-height: 1.12; }
