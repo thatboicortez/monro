@@ -14,7 +14,7 @@
   "kvk": "",
   "_behandelingen": "Volgorde = volgorde op de site. signature: true = uitgelicht op de homepage (met foto). Teksten staan in nl.json / uk.json onder 'treatments'.",
   "treatments": [
-    { "id": "dieptereiniging", "duration": "120", "price": 70, "signature": true, "image": "reiniging.jpg" },
+    { "id": "dieptereiniging", "duration": "120", "price": 80, "signature": true, "image": "reiniging.jpg" },
     { "id": "acne", "duration": "120", "price": 90, "signature": true, "image": "sfeer-2.jpg" },
     { "id": "couperose", "duration": "75", "price": 75 },
     { "id": "microneedling", "duration": "60-75", "price": 110 },
@@ -33,7 +33,7 @@
         { "id": "kort", "duration": "45", "price": 60 },
         { "id": "lang", "duration": "60", "price": 75 }
       ] },
-    { "id": "chiromassage", "duration": "60", "price": 40 },
+    { "id": "chiromassage", "duration": "60", "price": 50 },
     { "id": "serum", "duration": "60", "price": 65 },
     { "id": "glow", "duration": "75", "price": 80 },
     { "id": "fullface", "duration": "120", "price": 125, "signature": true, "image": "sfeer-1.jpg" }

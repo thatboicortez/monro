@@ -313,6 +313,27 @@ def treatments(lang):
           <p class="tr__label">{e(c['variantsTitle'])}</p>
           <ul class="variants">{rows}
           </ul>"""
+        more = ""
+        if c.get("more"):
+            parts = []
+            for b in c["more"]["blocks"]:
+                if b["type"] == "lead":
+                    parts.append(f'<p class="more__lead">{e(b["text"])}</p>')
+                elif b["type"] == "h":
+                    parts.append(f'<h3 class="more__h">{e(b["text"])}</h3>')
+                elif b["type"] == "sub":
+                    parts.append(f'<div class="more__sub"><h4>{e(b["title"])}</h4><p>{e(b["text"])}</p></div>')
+                elif b["type"] == "list":
+                    parts.append('<ul class="more__list">' + "".join(f"<li>{e(i)}</li>" for i in b["items"]) + "</ul>")
+                elif b["type"] == "quote":
+                    parts.append(f'<p class="more__quote">{e(b["text"])}</p>')
+                else:
+                    parts.append(f'<p>{e(b["text"])}</p>')
+            more = f"""
+          <details class="steps more">
+            <summary>{e(c['more']['label'])}<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="more__body">{''.join(parts)}</div>
+          </details>"""
         steps = "".join(f"<li>{e(s)}</li>" for s in c["steps"])
         note = f'\n          <p class="tr__note">{e(c["note"])}</p>' if c.get("note") else ""
         articles.append(f"""
@@ -321,7 +342,7 @@ def treatments(lang):
             <h2 class="tr__title">{e(c['name'])}</h2>
             <p class="tr__meta"><span>{duration(t, tr['duration'])}</span><span class="tr__price">{price(t, tr)}</span></p>
           </div>
-          <p class="tr__desc">{e(c['desc'])}</p>{variants}
+          <p class="tr__desc">{e(c['desc'])}</p>{variants}{more}
           <details class="steps">
             <summary>{e(p['steps'])}<span class="faq__icon" aria-hidden="true"></span></summary>
             <ol>{steps}</ol>
@@ -370,7 +391,7 @@ def about(lang):
         <p class="reveal">{e(p['p2'])}</p>
         <p class="about-hero__sign reveal">{e(loc(CFG['owner'], lang))}</p>
       </div>
-      <div class="about-hero__media reveal"><img src="/images/studio.jpg" alt="" width="1200" height="1800"></div>
+      <div class="about-hero__media reveal"><img src="/images/tetiana.jpg" alt="{e(loc(CFG['owner'], lang))}" width="1179" height="858"></div>
     </section>
 
     <section class="section">

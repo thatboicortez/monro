@@ -188,14 +188,127 @@
     },
     "chiromassage": {
       "name": "Spaanse chiromassage gezicht",
-      "short": "Ontspannende gezichtsmassage met vloeiende, ritmische technieken.",
-      "desc": "Een ontspannende gezichtsmassage met vloeiende, ritmische en gevarieerde manuele technieken.",
+      "short": "Manuele techniek voor ontspanning, een frisse teint en zichtbaar strakkere contouren.",
+      "desc": "De kunst van natuurlijke verjonging en manuele lifting. Een verfijnde manuele methode voor gezicht, hals en decolleté, gericht op ontspanning, een frisse teint en zichtbaar strakkere contouren.",
       "steps": [
         "Zachte gezichtsreiniging",
         "Aanbrengen van een geschikt massageproduct",
         "Uitgebreide chiromassage van gezicht, hals en eventueel decolleté",
         "Afsluitende huidverzorging"
-      ]
+      ],
+      "more": {
+        "label": "Meer over Spaanse chiromassage",
+        "blocks": [
+          {
+            "type": "lead",
+            "text": "De kunst van natuurlijke verjonging en manuele lifting"
+          },
+          {
+            "type": "p",
+            "text": "Een mooi gezicht begint niet alleen bij de huid. Het begint bij harmonieus samenwerkende spieren, een goede microcirculatie, vrij bewegende weefsels en innerlijke ontspanning."
+          },
+          {
+            "type": "p",
+            "text": "Spaanse chiromassage is een verfijnde, technisch veeleisende manuele massagemethode. Ze combineert een diepgaand begrip van de anatomie van het gezicht met precieze bewegingen en een persoonlijke benadering van huidveroudering."
+          },
+          {
+            "type": "p",
+            "text": "De oorsprong van de methode ligt bij de Spaanse arts Vicente Lino Ferrándiz García. De esthetische chiromassage is verder ontwikkeld door de Spaanse specialist Enrique Castells García, die de manuele technieken verfijnde en complete programma's ontwikkelde voor verschillende weefselstructuren."
+          },
+          {
+            "type": "h",
+            "text": "Wat maakt Spaanse chiromassage uniek?"
+          },
+          {
+            "type": "p",
+            "text": "Anders dan een gewone cosmetische massage werkt Spaanse chiromassage op meerdere niveaus in de weefsels van gezicht, hals en decolleté. De methode combineert verschillende richtingen:"
+          },
+          {
+            "type": "sub",
+            "title": "Myostructurele en myofasciale technieken",
+            "text": "Gericht op de mimische spieren, zachte weefsels en fasciale structuren. Helpt spierspanning te verminderen, de beweeglijkheid van de weefsels te verbeteren, expressielijntjes zichtbaar te verzachten en de gelaatstrekken ontspannener te laten ogen."
+          },
+          {
+            "type": "sub",
+            "title": "Biovasculaire en lymfedrainerende technieken",
+            "text": "Zachte, anatomisch gerichte bewegingen ondersteunen de oppervlakkige microcirculatie en de natuurlijke lymfe- en veneuze afvoer. Dat is vooral prettig bij een neiging tot vochtophoping, opgezwollenheid en een opgezet gezicht in de ochtend."
+          },
+          {
+            "type": "sub",
+            "title": "Modellerende en liftende technieken",
+            "text": "Speciale kneed-, rek- en modellerende bewegingen zijn gericht op een betere spankracht van de zachte weefsels en zichtbaar strakkere gezichtscontouren."
+          },
+          {
+            "type": "sub",
+            "title": "Neurosedatieve technieken",
+            "text": "Vloeiende, ritmische, ononderbroken bewegingen helpen opgebouwde spanning los te laten, diep te ontspannen en een gevoel van innerlijke rust terug te vinden."
+          },
+          {
+            "type": "h",
+            "text": "Welk resultaat mag je verwachten?"
+          },
+          {
+            "type": "p",
+            "text": "Na een Spaanse chiromassage kan het gezicht frisser, uitgeruster en harmonieuzer ogen."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Minder zichtbare vochtophoping en opgezwollenheid.",
+              "Een frissere teint dankzij plaatselijke stimulatie van de microcirculatie.",
+              "Zichtbaar zachtere fijne lijntjes en expressielijnen.",
+              "Een steviger en strakker aanvoelende huid.",
+              "Een zichtbaar strakkere gezichtsovaal.",
+              "Ontspanning van gespannen gezichts- en kauwspieren.",
+              "Diepe ontspanning en minder vermoeidheid."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Het resultaat is persoonlijk en hangt af van de huid, de conditie van de zachte weefsels en de regelmaat van de behandelingen."
+          },
+          {
+            "type": "h",
+            "text": "Waarom een kuur?"
+          },
+          {
+            "type": "p",
+            "text": "Eén behandeling laat je diepe ontspanning ervaren, een frissere teint zien en het effect van minder vochtophoping merken."
+          },
+          {
+            "type": "p",
+            "text": "Met een kuur werken we stap voor stap aan je wensen en stemmen we de intensiteit en de combinatie van technieken af op de conditie van de weefsels."
+          },
+          {
+            "type": "p",
+            "text": "Als startprogramma kan een kuur van 6-10 behandelingen worden geadviseerd, 1-2 keer per week. Hoe vaak je daarna terugkomt om het resultaat te behouden, bepalen we samen."
+          },
+          {
+            "type": "h",
+            "text": "Mijn aanpak"
+          },
+          {
+            "type": "p",
+            "text": "Ik zie het gezicht niet als losse rimpels of zones, maar als één anatomisch systeem waarin huid, spieren, fascia, bloedvaten en emotionele spanning met elkaar samenhangen."
+          },
+          {
+            "type": "p",
+            "text": "Elke behandeling stem ik af op de kenmerken van je gezicht, de mate van spierspanning, de neiging tot vochtophoping en het resultaat dat je wenst. Ik besteed bijzondere aandacht aan de precisie van de bewegingen, hun diepte, ritme en volgorde."
+          },
+          {
+            "type": "p",
+            "text": "Voor mij is Spaanse chiromassage een combinatie van vakkennis, de kunst van aanraking en een zorgvuldige omgang met de natuurlijke schoonheid van het gezicht."
+          },
+          {
+            "type": "quote",
+            "text": "De behandeling duurt 60 minuten: een uur persoonlijke aandacht, diepe ontspanning en professionele huidverzorging. Spaanse chiromassage is zelfzorg als kunst, met alle aandacht voor natuurlijke schoonheid."
+          },
+          {
+            "type": "p",
+            "text": "Maak een afspraak voor een behandeling of een adviesgesprek over een passende kuur."
+          }
+        ]
+      }
     },
     "serum": {
       "name": "Intensieve serumbehandeling",

@@ -273,6 +273,19 @@ ul, ol { padding: 0; list-style: none; }
 .steps ol { margin: 0 0 18px; padding-left: 1.3em; list-style: decimal; color: var(--ink-2); display: grid; gap: 6px; }
 .steps ol li::marker { color: var(--accent); }
 
+/* Uitgebreide uitleg (bv. Spaanse chiromassage) */
+.more + .steps { border-top: 0; margin-top: 0; }
+.more__body { padding: 4px 0 28px; max-width: 64ch; color: var(--ink-2); }
+.more__body > * + * { margin-top: 14px; }
+.more__lead { font-family: var(--serif); font-size: clamp(20px, 1.8vw, 24px); line-height: 1.35; color: var(--accent); }
+.more__h { font-family: var(--serif); font-size: clamp(20px, 1.8vw, 24px); color: var(--ink); margin-top: 32px !important; }
+.more__sub { padding-left: 16px; border-left: 2px solid var(--line); }
+.more__sub h4 { margin: 0 0 6px; font-size: 16px; font-weight: 600; color: var(--ink); }
+.more__list { display: grid; gap: 8px; }
+.more__list li { position: relative; padding-left: 20px; }
+.more__list li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 1.5px; background: var(--accent); }
+.more__quote { font-family: var(--serif); font-size: 19px; line-height: 1.45; color: var(--ink); padding: 20px 24px; background: var(--bg-2); border-radius: var(--radius-sm); margin-top: 28px !important; }
+
 .boosters { margin-top: clamp(16px, 3vw, 32px); padding: clamp(24px, 3vw, 36px); background: var(--bg-2); border-radius: var(--radius); }
 .boosters__list { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
 .boosters__list li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
@@ -287,7 +300,7 @@ ul, ol { padding: 0; list-style: none; }
 .about-hero__text > p:not(.about-hero__intro):not(.about-hero__sign) { color: var(--ink-2); font-size: 17px; max-width: 50ch; }
 .about-hero__text > p + p { margin-top: 16px; }
 .about-hero__text .about-hero__sign { font-family: var(--serif); font-size: 22px; margin-top: 32px; }
-.about-hero__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
+.about-hero__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 46% 30%; border-radius: var(--radius); }
 
 .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 48px); margin-top: clamp(32px, 4vw, 56px); }
 .value { padding-top: 24px; border-top: 1px solid var(--ink); }
