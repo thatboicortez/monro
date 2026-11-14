@@ -322,7 +322,7 @@ ul, ol { padding: 0; list-style: none; }
 .pstep__text { color: var(--ink-2); font-size: 17px; max-width: 46ch; }
 
 .wide-image { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
-.wide-image img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 35%; border-radius: var(--radius); }
+.wide-image img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 50%; border-radius: var(--radius); }
 
 .faq { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
 .faq__list { border-top: 1px solid var(--ink); }

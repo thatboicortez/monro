@@ -433,7 +433,7 @@ def process(lang):
       </ol>
     </section>
 
-    <div class="wide-image reveal"><img src="/images/sfeer-1.jpg" alt="" loading="lazy" width="900" height="1350"></div>
+    <div class="wide-image reveal"><img src="/images/werkwijze.jpg" alt="" loading="lazy" width="2200" height="1467"></div>
 
     <section class="section faq">
       <h2 class="h2 reveal">{e(p['faqTitle'])}</h2>
