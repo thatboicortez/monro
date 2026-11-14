@@ -33,7 +33,7 @@
         { "id": "kort", "duration": "45", "price": 60 },
         { "id": "lang", "duration": "60", "price": 75 }
       ] },
-    { "id": "chiromassage", "duration": "60", "price": 50 },
+    { "id": "chiromassage", "duration": "60", "price": 50, "signature": true, "image": "werkwijze.jpg" },
     { "id": "serum", "duration": "60", "price": 65 },
     { "id": "glow", "duration": "75", "price": 80 },
     { "id": "fullface", "duration": "120", "price": 125, "signature": true, "image": "sfeer-1.jpg" }
