@@ -276,7 +276,7 @@ def home(lang):
 
     <section class="dark-split">
       <div class="dark-split__inner">
-        <div class="dark-split__media reveal"><img src="/images/studio.jpg" alt="" loading="lazy" width="1200" height="1800"></div>
+        <div class="dark-split__media reveal"><img src="/images/kabinet.jpg" alt="{e(h['studioAlt'])}" loading="lazy" width="960" height="1280"></div>
         <div class="dark-split__text">
           <h2 class="h2 reveal">{e(h['aboutTitle'])}</h2>
           <p class="reveal">{e(h['aboutText'])}</p>
