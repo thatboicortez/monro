@@ -334,7 +334,13 @@ def treatments(lang):
             <summary>{e(c['more']['label'])}<span class="faq__icon" aria-hidden="true"></span></summary>
             <div class="more__body">{''.join(parts)}</div>
           </details>"""
-        steps = "".join(f"<li>{e(s)}</li>" for s in c["steps"])
+        steps = ""
+        if c.get("steps"):
+            steps = f"""
+          <details class="steps">
+            <summary>{e(p['steps'])}<span class="faq__icon" aria-hidden="true"></span></summary>
+            <ol>{"".join(f"<li>{e(s)}</li>" for s in c["steps"])}</ol>
+          </details>"""
         note = f'\n          <p class="tr__note">{e(c["note"])}</p>' if c.get("note") else ""
         articles.append(f"""
         <article class="tr reveal" id="{tr['id']}">
@@ -342,11 +348,7 @@ def treatments(lang):
             <h2 class="tr__title">{e(c['name'])}</h2>
             <p class="tr__meta"><span>{duration(t, tr['duration'])}</span><span class="tr__price">{price(t, tr)}</span></p>
           </div>
-          <p class="tr__desc">{e(c['desc'])}</p>{variants}{more}
-          <details class="steps">
-            <summary>{e(p['steps'])}<span class="faq__icon" aria-hidden="true"></span></summary>
-            <ol>{steps}</ol>
-          </details>{note}
+          <p class="tr__desc">{e(c['desc'])}</p>{variants}{more}{steps}{note}
           <a class="link-arrow" href="{url('contact', lang)}?behandeling={tr['id']}">{e(t['nav']['book'])}</a>
         </article>""")
 
