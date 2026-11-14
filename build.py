@@ -393,7 +393,7 @@ def about(lang):
         <p class="reveal">{e(p['p2'])}</p>
         <p class="about-hero__sign reveal">{e(loc(CFG['owner'], lang))}</p>
       </div>
-      <div class="about-hero__media reveal"><img src="/images/tetiana.jpg" alt="{e(loc(CFG['owner'], lang))}" width="1179" height="858"></div>
+      <div class="about-hero__media reveal"><img src="/images/tetiana.jpg" alt="{e(loc(CFG['owner'], lang))}" width="1122" height="1402"></div>
     </section>
 
     <section class="section">
