@@ -401,13 +401,6 @@ def about(lang):
       <ul class="values">{values}
       </ul>
     </section>
-
-    <section class="dark-band">
-      <div class="dark-band__inner">
-        <h2 class="h2 reveal">{e(p['langTitle'])}</h2>
-        <p class="reveal">{e(p['langText'])}</p>
-      </div>
-    </section>
 {cta_band(lang)}
   </main>"""
     return head(lang, "about", p["title"], p["desc"]) + header(lang, "about") + body + footer(lang)
