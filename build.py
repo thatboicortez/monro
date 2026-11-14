@@ -232,7 +232,7 @@ def page_head(title, lead):
 def home(lang):
     t, h = T[lang], T[lang]["home"]
     rows = []
-    for tr in (x for x in CFG["treatments"] if x.get("signature")):
+    for tr in sorted((x for x in CFG["treatments"] if x.get("signature")), key=lambda x: x.get("homeOrder", 99)):
         c = t["treatments"][tr["id"]]
         rows.append(f"""
           <li class="reveal">
