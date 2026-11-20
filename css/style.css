@@ -282,6 +282,9 @@ ul, ol { padding: 0; list-style: none; }
 .more__sub { padding-left: 16px; border-left: 2px solid var(--line); }
 .more__sub h4 { margin: 0 0 6px; font-size: 16px; font-weight: 600; color: var(--ink); }
 .more__list { display: grid; gap: 8px; }
+.more__ol { padding-left: 1.3em; list-style: decimal; display: grid; gap: 6px; }
+.more__ol li::marker { color: var(--accent); }
+.more + .more { border-top: 0; margin-top: 0; }
 .more__list li { position: relative; padding-left: 20px; }
 .more__list li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 1.5px; background: var(--accent); }
 .more__quote { font-family: var(--serif); font-size: 19px; line-height: 1.45; color: var(--ink); padding: 20px 24px; background: var(--bg-2); border-radius: var(--radius-sm); margin-top: 28px !important; }

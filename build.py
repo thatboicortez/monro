@@ -307,31 +307,36 @@ def treatments(lang):
         variants = ""
         if tr.get("variants"):
             rows = "".join(f"""
-              <li><span class="variants__name">{e(c['variants'][v['id']]['name'])}</span><span class="variants__text">{e(c['variants'][v['id']]['text'])}</span><span class="variants__price">€{v['price']}</span></li>"""
+              <li><span class="variants__name">{e(c['variants'][v['id']]['name'])}</span><span class="variants__text">{e(c['variants'][v['id']]['text'])}</span><span class="variants__price">{"€" + str(v["price"]) if "price" in v else e(t["common"]["onRequest"])}</span></li>"""
                            for v in tr["variants"])
             variants = f"""
           <p class="tr__label">{e(c['variantsTitle'])}</p>
           <ul class="variants">{rows}
           </ul>"""
         more = ""
-        if c.get("more"):
+        mores = c.get("more") or []
+        if isinstance(mores, dict):
+            mores = [mores]
+        for m in mores:
             parts = []
-            for b in c["more"]["blocks"]:
+            for b in m["blocks"]:
                 if b["type"] == "lead":
                     parts.append(f'<p class="more__lead">{e(b["text"])}</p>')
                 elif b["type"] == "h":
                     parts.append(f'<h3 class="more__h">{e(b["text"])}</h3>')
                 elif b["type"] == "sub":
                     parts.append(f'<div class="more__sub"><h4>{e(b["title"])}</h4><p>{e(b["text"])}</p></div>')
+                elif b["type"] == "ol":
+                    parts.append('<ol class="more__ol">' + "".join(f"<li>{e(i)}</li>" for i in b["items"]) + "</ol>")
                 elif b["type"] == "list":
                     parts.append('<ul class="more__list">' + "".join(f"<li>{e(i)}</li>" for i in b["items"]) + "</ul>")
                 elif b["type"] == "quote":
                     parts.append(f'<p class="more__quote">{e(b["text"])}</p>')
                 else:
                     parts.append(f'<p>{e(b["text"])}</p>')
-            more = f"""
+            more += f"""
           <details class="steps more">
-            <summary>{e(c['more']['label'])}<span class="faq__icon" aria-hidden="true"></span></summary>
+            <summary>{e(m['label'])}<span class="faq__icon" aria-hidden="true"></span></summary>
             <div class="more__body">{''.join(parts)}</div>
           </details>"""
         steps = ""

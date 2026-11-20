@@ -18,14 +18,15 @@
     { "id": "acne", "duration": "120", "price": 90, "signature": true, "homeOrder": 3, "image": "sfeer-2.jpg" },
     { "id": "couperose", "duration": "75", "price": 75 },
     { "id": "microneedling", "duration": "60-75", "price": 110 },
-    { "id": "peeling", "duration": "60-75", "priceFrom": 65,
+    { "id": "peeling", "duration": "60-75", "priceFrom": 60,
       "variants": [
         { "id": "melkzuur", "price": 65 },
         { "id": "amandelzuur", "price": 70 },
         { "id": "glycolzuur", "price": 75 },
         { "id": "salicylzuur", "price": 80 },
         { "id": "pyrodruivenzuur", "price": 85 },
-        { "id": "retinol", "price": 95 }
+        { "id": "argireline" },
+        { "id": "retinol", "price": 60 }
       ] },
     { "id": "elektroporatie", "duration": "60", "price": 75 },
     { "id": "microcurrent", "duration": "45 / 60", "priceFrom": 60,

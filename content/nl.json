@@ -18,7 +18,8 @@
     "allTreatments": "Alle behandelingen",
     "ctaTitle": "Begin met een huidanalyse.",
     "ctaText": "Laat je gegevens achter of stuur een WhatsApp-bericht. Je krijgt zo snel mogelijk een voorstel voor een datum en tijd.",
-    "cosmetologist": "cosmetoloog"
+    "cosmetologist": "cosmetoloog",
+    "onRequest": "op aanvraag"
   },
   "home": {
     "title": "Monro | Schoonheidssalon en huidverbetering in Wissenkerke",
@@ -131,9 +132,13 @@
           "name": "Pyrodruivenzuurpeeling",
           "text": "Professionele vernieuwing bij een onregelmatige huidstructuur."
         },
+        "argireline": {
+          "name": "Argireline-peeling (pH 3,5)",
+          "text": "Vernieuwing, hydratatie en anti-age verzorging."
+        },
         "retinol": {
-          "name": "Retinolpeeling",
-          "text": "Voor tekenen van huidveroudering door zonlicht en een onregelmatige teint."
+          "name": "Retinolpeeling (pH 4,5)",
+          "text": "Intensieve huidvernieuwing en anti-age verzorging."
         }
       },
       "steps": [
@@ -146,7 +151,122 @@
         "Afsluitende verzorging en zonbescherming",
         "Persoonlijk advies voor de dagen na de behandeling"
       ],
-      "note": "Bij sommige retinolpeelings blijft het product volgens het behandelprotocol nog enige tijd op de huid. De nazorg wordt hierop afgestemd."
+      "note": "Bij sommige retinolpeelings blijft het product volgens het behandelprotocol nog enige tijd op de huid. De nazorg wordt hierop afgestemd.",
+      "more": [
+        {
+          "label": "Meer over de argireline-peeling (pH 3,5)",
+          "blocks": [
+            {
+              "type": "lead",
+              "text": "Vernieuwing, hydratatie en anti-age verzorging"
+            },
+            {
+              "type": "p",
+              "text": "Een zuurpeeling met meerdere werkstoffen en het peptide argireline, gericht op een betere huidkwaliteit en het voorkomen van tekenen van huidveroudering."
+            },
+            {
+              "type": "h",
+              "text": "Werking van de peeling"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Verwijdert voorzichtig verhoornde huidcellen.",
+                "Egaliseert teint en huidstructuur.",
+                "Helpt pigmentvlekken te verminderen.",
+                "Verbetert de gladheid en veerkracht van de huid.",
+                "Vermindert de zichtbaarheid van fijne lijntjes.",
+                "Draagt bij aan hydratatie en vernieuwing van de huid."
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Werkzame stoffen: complex van fruitzuren, argireline 2%, extract van zwarte bes, geraniumolie."
+            },
+            {
+              "type": "p",
+              "text": "Aanbevolen bij: een doffe huid, de eerste tekenen van huidveroudering, een onregelmatige teint, fijne lijntjes en tekenen van huidveroudering door zonlicht."
+            },
+            {
+              "type": "h",
+              "text": "Behandelprotocol"
+            },
+            {
+              "type": "ol",
+              "items": [
+                "Reinigen en voorbereiden van de huid.",
+                "Aanbrengen van de peeling: 1-3 lagen, afhankelijk van de conditie en gevoeligheid van de huid.",
+                "Inwerktijd: ongeveer 5-7 minuten volgens het protocol van de fabrikant.",
+                "Afspoelen van de peeling met koel water.",
+                "Kalmerend en hydraterend masker.",
+                "Afsluitende verzorging: herstellende crème en SPF 50."
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Het aantal lagen en de inwerktijd worden persoonlijk afgestemd."
+            }
+          ]
+        },
+        {
+          "label": "Meer over de retinolpeeling (pH 4,5)",
+          "blocks": [
+            {
+              "type": "lead",
+              "text": "Intensieve huidvernieuwing en anti-age verzorging"
+            },
+            {
+              "type": "p",
+              "text": "De retinolpeeling is een chemische huidvernieuwing, gericht op een betere huidstructuur, een egalere teint en minder zichtbare tekenen van huidveroudering."
+            },
+            {
+              "type": "h",
+              "text": "Werking van de peeling"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Stimuleert de vernieuwing van huidcellen.",
+                "Helpt fijne lijntjes te verminderen.",
+                "Egaliseert teint en huidreliëf.",
+                "Vermindert pigmentvlekken en acnelittekens.",
+                "Helpt de conditie van een huid met verwijde poriën te verbeteren.",
+                "Draagt bij aan een gladde en veerkrachtige huid."
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Werkzame stoffen: retinol, resorcinol."
+            },
+            {
+              "type": "p",
+              "text": "Aanbevolen bij: tekenen van huidveroudering, huidveroudering door zonlicht, een onregelmatige teint, pigmentvlekken, acnelittekens en een neiging tot mee-eters."
+            },
+            {
+              "type": "p",
+              "text": "Behandelzones: gezicht, hals en decolleté (als de gebruiksaanwijzing van het product dit toestaat)."
+            },
+            {
+              "type": "h",
+              "text": "Behandelprotocol"
+            },
+            {
+              "type": "ol",
+              "items": [
+                "Beoordeling van de huid en uitsluiten van contra-indicaties.",
+                "Reinigen en voorbereiden van de huid.",
+                "Aanbrengen van de peeling: het aantal lagen wordt persoonlijk bepaald volgens de gebruiksaanwijzing van de fabrikant.",
+                "Inwerktijd volgens het protocol van de fabrikant; indien nodig wordt het product op een afgesproken tijdstip thuis afgespoeld.",
+                "Herstellende verzorging en verplichte zonbescherming SPF 50."
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Kuur: het aantal behandelingen en de tussenpozen worden persoonlijk bepaald."
+            }
+          ]
+        }
+      ]
     },
     "elektroporatie": {
       "name": "Elektroporatie, mesotherapie zonder naalden",
